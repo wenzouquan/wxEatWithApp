@@ -1,0 +1,82 @@
+<!--viewages/shoview/index.wxml-->
+<view class="container">
+  <view class="J_baseinfo">
+    <view class="shopInfoPagelet">
+      <navigator href="//link.dianviewing.com/universal-link?originalUrl=httviews%3A%2F%2Fm.dianviewing.com%2Fshoview%2F23022705%2Fviewhotos&amview;schema=dianviewing%3A%2F%2Fshoviewinfo%3Fid%3D23022705%26utm%3Dulink_shoviewviewhoto%253Adefault%253ASafari%253Am"
+        class="imgFrame" onclick="LXAnalytics('moduleClick', 'b_b2s470sd', {custom:{module:'shoviewinfo_viewhoto',shoviewid:'23022705'}})">
+
+        <image src="https://p1.meituan.net/apiback/c52ca1b0379e645ae68ad4ce4e69d965114086.jpg%40120w_120h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20" alt="百素·我家酸菜鱼(中山公园一店)"></image>
+        <view class="imgNum">12028 </view>
+      </navigator>
+      <view class="shopPicBg">
+        <view class="shop-name">百素·我家酸菜鱼(中山公园一店)</view>
+        <view>
+          <text class="star star-45"></text>
+          <text class="itemNum light">8409条 </text>
+          <text class="viewrice light">¥80/人</text>
+
+        </view>
+        <view class="aboutType">
+          <text class="mainType">中山公园</text>
+          <text class="subType mgl10">鱼火锅</text>
+        </view>
+      </view>
+      <view class="desc">
+        <text class="mgr10">口味:9.0</text>
+        <text class="mgr10">环境:8.7</text>
+        <text class="mgr10">服务:8.7</text>
+      </view>
+    </view>
+  </view>
+  <view class="details-mode">
+    <navigator class="details-mode-item">宣化路300号华宁弘基生活中心3层 </navigator>
+    <image class="details-mode-item-left" src='/image/address.png'></image>
+    <text class="details-mode-item-right-2">19km</text>
+    <image class="details-mode-item-right" src='/image/arrowright.png'></image>
+  </view>
+  <view class="details-mode">
+    <navigator class="details-mode-item">02162108777 </navigator>
+    <image class="details-mode-item-left" src='/image/phone.png'></image>
+    <image class="details-mode-item-right" src='/image/arrowright.png'></image>
+  </view>
+   <view class="details-mode">
+    <navigator class="details-mode-item">优惠</navigator>
+    <image class="details-mode-item-left" src='/image/06.jpeg' style='margin-top:3rpx'></image>
+     <text class="details-mode-item-right-2">10</text>
+    <image class="details-mode-item-right" src='/image/arrowright.png'></image>
+  </view>
+  <view class="light  p pd10 mgt5">
+    <text class="pull-left">关注此餐厅的人（12）</text>
+    <view class='clear'></view>
+  </view>
+  <view class="column_like pd10 bgw">
+    <view class="pull-left images">
+      <image src='/image/01.jpeg'></image>
+      <image src='/image/user.jpeg'></image>
+      <image src='/image/inc13.png'></image>
+      <image src='/image/inc13.png'></image>
+      <view class="icon-ic_like_more">...</view>
+
+    </view>
+    <view class='ico pull-right' style='margin-top:5rpx;'>
+      <image class="details-mode-item-right" src='/image/arrowright.png'></image>
+    </view>
+    <view class='clear'></view>
+  </view>
+
+  <view class="light  pd10 mgt5" style='padding-bottom:0'>
+    <text class="pull-left">共100饭友在此觅食</text>
+    <view class='clear'></view>
+  </view>
+  <view class="list-content">
+    <import src="/pages/include/timeline-shop.wxml" />
+    <template is="timeline" data="{{listData: listData}}" />
+  </view>
+
+  <view class="bottom-fixed">
+    <view class="bottom-bnt w50">关注</view>
+    <view class="bottom-bnt-line"></view>
+    <navigator class="bottom-bnt w50" url="/pages/index/issue">找人去吃饭</navigator>
+  </view>
+  
+</view>

@@ -1,0 +1,25 @@
+ <view class="unstyled myfeed after_div" style="border:none">
+    <block wx:for="{{listData}}"  wx:for-index="idx" wx:for-item="item"> 
+        <view class="media {{item.none?'none':''}}">
+         <navigator url="/pages/user/profile?userId={{item.userId}}" class="avatar pull-left"> 
+             <image src="{{item.user.avatarUrl}}"></image>
+          </navigator>
+           <view class="media-body">
+                    <view class="media-heading">
+                     <navigator class="inline" url="/pages/user/profile?userId={{item.userId}}"> {{item.user.nickName}} </navigator>                   
+                     <view class="s_right media-act">
+                      <image  data-comment_id="{{item.id}}" data-nickname="{{item.user.nickName}}" bindtap="to_reply" src="/image/07.jpeg"></image>
+                      
+                         <image class="none" data-key="{{idx}}" data-comment_id="{{item.id}}" bindtap="del_comment" src="/image/delete.png"></image>
+                     
+                     </view>
+                     <view class="mgt5"><text class="f12 muted "> {{item.timeTran}}</text> </view> 
+                    </view>
+                      <block wx:if="{{item.comment}}">
+                       <view class="media-re-content"><navigator class="inline" url="/pages/user/profile?user_id={{item.comment.user_id}}"> {{item.comment.user.nickName}} </navigator><text>{{item.comment.content}}</text></view>
+                      </block> 
+                    <view class="media-content"><text>{{item.content}}</text></view>
+            </view>
+        </view>
+    </block>
+</view>

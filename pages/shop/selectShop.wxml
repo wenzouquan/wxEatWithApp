@@ -1,0 +1,320 @@
+<!--pages/shop/selectShop.wxml-->
+<view class="container">
+  <view class="overlay none"></view>
+  <view class='searchTop'>
+    <view class="J_search_trigger">
+      <input placeholder='输入城市或拼音查询'></input>
+    </view>
+    <view class="list-nav border-bottom-new">
+      <view class="cat Fix">
+        <view class="item" bindtap="changeOrder">商圈
+          <text class="drop"></text>
+        </view>
+        <view class="item">
+          美食
+          <text class="drop"></text>
+        </view>
+        <view class="item">
+          智能排序
+          <text class="drop"></text>
+        </view>
+      </view>
+    </view>
+    <view class="selector none" scroll-y>
+      <scroll-view class="selector-main-100" scroll-y>
+        <view data-parentid="0">
+          <text class="item Fix on">附近</text>
+        </view>
+        <view data-parentid="0">
+          <text class="item Fix">附近</text>
+        </view>
+      </scroll-view>
+    </view>
+
+    <view class="selector none">
+      <scroll-view class="selector-main" scroll-y>
+        <view data-parentid="0">
+          <text class="item Fix on">附近</text>
+        </view>
+        <view data-parentid="0">
+          <text class="item Fix">热门商区</text>
+        </view>
+        <view data-parentid="0">
+          <text class="item Fix">热门商区</text>
+        </view>
+        <view data-parentid="0">
+          <text class="item Fix">热门商区</text>
+        </view>
+        <view data-parentid="0">
+          <text class="item Fix">热门商区</text>
+        </view>
+        <view data-parentid="0">
+          <text class="item Fix">热门商区</text>
+        </view>
+        <view data-parentid="0">
+          <text class="item Fix">热门商区</text>
+        </view>
+        <view data-parentid="0">
+          <text class="item Fix">热门商区</text>
+        </view>
+        <view data-parentid="0">
+          <text class="item Fix">门商区</text>
+        </view>
+      </scroll-view>
+      <scroll-view class="selector-sub" scroll-y>
+        <view data-parentid="0">
+          <text class="item Fix on">附近</text>
+        </view>
+        <view data-parentid="0">
+          <text class="item Fix">热门商区</text>
+        </view>
+      </scroll-view>
+    </view>
+
+    <view class="clear"></view>
+  </view>
+
+  <scroll-view class="list-search" scroll-y>
+    <view class="list-item border-bottom-new">
+      <navigator class="item-main" href="//m.dianping.com/shop/26979034?from=shoplist&amp;shoplistqueryid=654235b1-0e54-48de-a90c-8ae2d9cde69c">
+        <view class="item-pic" style="background-image: url(https://p1.meituan.net/apiback/c52ca1b0379e645ae68ad4ce4e69d965114086.jpg%40120w_120h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20); border: none;"></view>
+        <view class="item-content">
+          <view class="item-title">
+            <view class="item-shop-name">
+              <!-- react-text: 13979 -->CRAZYONES西班牙海鲜饭
+              <!-- /react-text -->
+              <!-- react-text: 13980 -->(美罗城店)
+              <!-- /react-text -->
+            </view>
+            <!-- react-text: 13981 -->
+            <!-- /react-text -->
+            <text class="mark-takeaway mark-tag"></text>
+            <text class="mark-hui mark-tag"></text>
+          </view>
+          <view class="item-comment">
+            <text class="star star-45"></text>
+            <text class="item-comment-price">￥114/人</text>
+          </view>
+          <view class="item-info">
+            <view class="item-info-left">
+              <text class="light">徐家汇</text>
+              <text class="light"> 西班牙菜</text>
+            </view>
+            <view class="line mgt10"></view>
+          </view>
+        </view>
+      </navigator>
+      <view class="new-coupon">
+        <view class="pull-left">
+          <text class="light">50个活动</text>
+          <text class="light mgl10">3条分享</text>
+        </view>
+        <view class="pull-right">
+           <navigator url="/pages/index/issue" class="choose">选择这里</navigator>
+        </view>
+        <view class="clear"></view>
+      </view>
+    </view>
+    <view class="list-item border-bottom-new">
+      <navigator class="item-main" href="//m.dianping.com/shop/26979034?from=shoplist&amp;shoplistqueryid=654235b1-0e54-48de-a90c-8ae2d9cde69c">
+        <view class="item-pic" style="background-image: url(https://p1.meituan.net/apiback/c52ca1b0379e645ae68ad4ce4e69d965114086.jpg%40120w_120h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20); border: none;"></view>
+        <view class="item-content">
+          <view class="item-title">
+            <view class="item-shop-name">
+              <!-- react-text: 13979 -->CRAZYONES西班牙海鲜饭
+              <!-- /react-text -->
+              <!-- react-text: 13980 -->(美罗城店)
+              <!-- /react-text -->
+            </view>
+            <!-- react-text: 13981 -->
+            <!-- /react-text -->
+            <text class="mark-takeaway mark-tag"></text>
+            <text class="mark-hui mark-tag"></text>
+          </view>
+          <view class="item-comment">
+            <text class="star star-45"></text>
+            <text class="item-comment-price">￥114/人</text>
+          </view>
+          <view class="item-info">
+            <view class="item-info-left">
+              <text class="light">徐家汇</text>
+              <text class="light"> 西班牙菜</text>
+            </view>
+            <view class="line mgt10"></view>
+          </view>
+        </view>
+      </navigator>
+      <view class="new-coupon">
+        <view class="pull-left">
+          <text class="light">50个活动</text>
+          <text class="light mgl10">3条分享</text>
+        </view>
+        <view class="pull-right">
+           <navigator url="/pages/index/issue" class="choose">选择这里</navigator>
+        </view>
+        <view class="clear"></view>
+      </view>
+    </view>
+    <view class="list-item border-bottom-new">
+      <navigator class="item-main" href="//m.dianping.com/shop/26979034?from=shoplist&amp;shoplistqueryid=654235b1-0e54-48de-a90c-8ae2d9cde69c">
+        <view class="item-pic" style="background-image: url(https://p1.meituan.net/apiback/c52ca1b0379e645ae68ad4ce4e69d965114086.jpg%40120w_120h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20); border: none;"></view>
+        <view class="item-content">
+          <view class="item-title">
+            <view class="item-shop-name">
+              <!-- react-text: 13979 -->CRAZYONES西班牙海鲜饭
+              <!-- /react-text -->
+              <!-- react-text: 13980 -->(美罗城店)
+              <!-- /react-text -->
+            </view>
+            <!-- react-text: 13981 -->
+            <!-- /react-text -->
+            <text class="mark-takeaway mark-tag"></text>
+            <text class="mark-hui mark-tag"></text>
+          </view>
+          <view class="item-comment">
+            <text class="star star-45"></text>
+            <text class="item-comment-price">￥114/人</text>
+          </view>
+          <view class="item-info">
+            <view class="item-info-left">
+              <text class="light">徐家汇</text>
+              <text class="light"> 西班牙菜</text>
+            </view>
+            <view class="line mgt10"></view>
+          </view>
+        </view>
+      </navigator>
+      <view class="new-coupon">
+        <view class="pull-left">
+          <text class="light">50个活动</text>
+          <text class="light mgl10">3条分享</text>
+        </view>
+        <view class="pull-right">
+           <navigator url="/pages/index/issue" class="choose">选择这里</navigator>
+        </view>
+        <view class="clear"></view>
+      </view>
+    </view>
+    <view class="list-item border-bottom-new">
+      <navigator class="item-main" href="//m.dianping.com/shop/26979034?from=shoplist&amp;shoplistqueryid=654235b1-0e54-48de-a90c-8ae2d9cde69c">
+        <view class="item-pic" style="background-image: url(https://p1.meituan.net/apiback/c52ca1b0379e645ae68ad4ce4e69d965114086.jpg%40120w_120h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20); border: none;"></view>
+        <view class="item-content">
+          <view class="item-title">
+            <view class="item-shop-name">
+              <!-- react-text: 13979 -->CRAZYONES西班牙海鲜饭
+              <!-- /react-text -->
+              <!-- react-text: 13980 -->(美罗城店)
+              <!-- /react-text -->
+            </view>
+            <!-- react-text: 13981 -->
+            <!-- /react-text -->
+            <text class="mark-takeaway mark-tag"></text>
+            <text class="mark-hui mark-tag"></text>
+          </view>
+          <view class="item-comment">
+            <text class="star star-45"></text>
+            <text class="item-comment-price">￥114/人</text>
+          </view>
+          <view class="item-info">
+            <view class="item-info-left">
+              <text class="light">徐家汇</text>
+              <text class="light"> 西班牙菜</text>
+            </view>
+            <view class="line mgt10"></view>
+          </view>
+        </view>
+      </navigator>
+      <view class="new-coupon">
+        <view class="pull-left">
+          <text class="light">50个活动</text>
+          <text class="light mgl10">3条分享</text>
+        </view>
+        <view class="pull-right">
+           <navigator url="/pages/index/issue" class="choose">选择这里</navigator>
+        </view>
+        <view class="clear"></view>
+      </view>
+    </view>
+    <view class="list-item border-bottom-new">
+      <navigator class="item-main" href="//m.dianping.com/shop/26979034?from=shoplist&amp;shoplistqueryid=654235b1-0e54-48de-a90c-8ae2d9cde69c">
+        <view class="item-pic" style="background-image: url(https://p1.meituan.net/apiback/c52ca1b0379e645ae68ad4ce4e69d965114086.jpg%40120w_120h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20); border: none;"></view>
+        <view class="item-content">
+          <view class="item-title">
+            <view class="item-shop-name">
+              <!-- react-text: 13979 -->CRAZYONES西班牙海鲜饭
+              <!-- /react-text -->
+              <!-- react-text: 13980 -->(美罗城店)
+              <!-- /react-text -->
+            </view>
+            <!-- react-text: 13981 -->
+            <!-- /react-text -->
+            <text class="mark-takeaway mark-tag"></text>
+            <text class="mark-hui mark-tag"></text>
+          </view>
+          <view class="item-comment">
+            <text class="star star-45"></text>
+            <text class="item-comment-price">￥114/人</text>
+          </view>
+          <view class="item-info">
+            <view class="item-info-left">
+              <text class="light">徐家汇</text>
+              <text class="light"> 西班牙菜</text>
+            </view>
+            <view class="line mgt10"></view>
+          </view>
+        </view>
+      </navigator>
+      <view class="new-coupon">
+        <view class="pull-left">
+          <text class="light">50个活动</text>
+          <text class="light mgl10">3条分享</text>
+        </view>
+        <view class="pull-right">
+           <navigator url="/pages/index/issue" class="choose">选择这里</navigator>
+        </view>
+        <view class="clear"></view>
+      </view>
+    </view>
+      <view class="list-item border-bottom-new">
+      <navigator class="item-main" href="//m.dianping.com/shop/26979034?from=shoplist&amp;shoplistqueryid=654235b1-0e54-48de-a90c-8ae2d9cde69c">
+        <view class="item-pic" style="background-image: url(https://p1.meituan.net/apiback/c52ca1b0379e645ae68ad4ce4e69d965114086.jpg%40120w_120h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20); border: none;"></view>
+        <view class="item-content">
+          <view class="item-title">
+            <view class="item-shop-name">
+              <!-- react-text: 13979 -->CRAZYONES西班牙海鲜饭
+              <!-- /react-text -->
+              <!-- react-text: 13980 -->(美罗城店)
+              <!-- /react-text -->
+            </view>
+            <!-- react-text: 13981 -->
+            <!-- /react-text -->
+            <text class="mark-takeaway mark-tag"></text>
+            <text class="mark-hui mark-tag"></text>
+          </view>
+          <view class="item-comment">
+            <text class="star star-45"></text>
+            <text class="item-comment-price">￥114/人</text>
+          </view>
+          <view class="item-info">
+            <view class="item-info-left">
+              <text class="light">徐家汇</text>
+              <text class="light"> 西班牙菜</text>
+            </view>
+            <view class="line mgt10"></view>
+          </view>
+        </view>
+      </navigator>
+      <view class="new-coupon">
+        <view class="pull-left">
+          <text class="light">50个活动</text>
+          <text class="light mgl10">3条分享</text>
+        </view>
+        <view class="pull-right">
+          <navigator url="/pages/index/issue" class="choose">选择这里</navigator>
+        </view>
+        <view class="clear"></view>
+      </view>
+    </view>
+  </scroll-view>
+
+</view>

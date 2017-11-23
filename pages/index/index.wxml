@@ -1,12 +1,52 @@
-<page>
- <view class="map">
-     <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="12" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 100%;">
-     <cover-view class="header" bindtap="jumpUser">
+<view class="map  {{showType==1?'':'none'}}">
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="12" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 100%;">
+    <cover-view class="header header-left" bindtap="jumpUser">
       <cover-image src='../../image/01.jpeg' alt="用户中心"></cover-image>
-      </cover-view>
-      <cover-view class="bottom">
-        <cover-view class="bottom-count pull-left">共1045位饭友正在附近觅食 </cover-view > <cover-view bindtap="jumpIssue"  class="bottom-btn pull-left">找人吃饭</cover-view>
-      </cover-view>
-     </map>     
-     </view>
-</page>
+    </cover-view>
+
+    <cover-view class="header header-right" bindtap="changeViwe">
+      <cover-image src="../../image/list.jpeg" alt="列表"></cover-image>
+    </cover-view>
+
+    <cover-view class="bottom">
+      <cover-view class="bottom-count pull-left">共1045位饭友正在附近觅食 </cover-view>
+      <cover-view bindtap="jumpIssue" class="bottom-btn pull-left">找人吃饭</cover-view>
+    </cover-view>
+    <!-- <cover-view class="bottom-left" bindtap="translateMarker"> <cover-image src='../../image/03.jpeg' alt="回到中心"></cover-image></cover-view> -->
+  </map>
+</view>
+<!--列表查看 -->
+<view catchtap="bodyclick" class="list-view {{showType==2?'':'none'}}">
+  <view class='list-header'>
+    <view class="header header-left" bindtap="jumpUser">
+      <image src='../../image/01.jpeg' alt="用户中心"></image>
+    </view>
+
+     <navigator url="/pages/index/selectCity"  class="header header-center">上海 [切换城市]</navigator>
+    <view class="header header-right-2" catchtap="tapOrder">
+      <image src="/image/{{orderListActive==1?'ico32':'ico31'}}.png" alt="排序"></image>
+    </view>
+
+    <view class="header header-right" bindtap="changeViwe">
+      <image src='../../image/05.jpg' alt="列表"></image>
+    </view>
+  </view>
+  <!-- 排序 -->
+  <view class="orderList {{orderListActive==1?'':'none'}}">
+    <view class="orderListTitle">排序</view>
+    <view data-key="1" bindtap="changeOrder" class="orderList-li order-ico-1 {{showOrder==1?'active':''}}">点赞最多</view>
+    <view data-key="2" bindtap="changeOrder" class="orderList-li order-ico-2 {{showOrder==2?'active':''}}">时间正序</view>
+    <view data-key="3" bindtap="changeOrder" class="orderList-li order-ico-3 {{showOrder==3?'active':''}}">时间倒序</view>
+    <view data-key="4" bindtap="changeOrder" class="orderList-li order-ico-4 {{showOrder==4?'active':''}}">评论最多</view>
+  </view>
+
+  <view style='height: 100rpx'></view>
+  <view class="list-content">
+    <import src="/pages/include/timeline.wxml" />
+    <template is="timeline" data="{{listData: listData}}" />
+  </view>
+  <view class="list-bottom">
+    <view bindtap="jumpIssue" class="list-bottom-btn pull-right">找人吃饭</view>
+    <view class="list-bottom-count pull-right">共1045位饭友正在附近觅食 </view>
+  </view>
+</view>

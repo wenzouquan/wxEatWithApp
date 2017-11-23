@@ -1,0 +1,41 @@
+<page>
+  <view class="container">
+    <view class="banner-class">
+
+      <view class="l-promo-block-v1-content">
+
+        <view class="class_img text-center">
+          <image class="_ico" src="{{user_info.avatarUrl}}" alt="" />
+          <view class="mgt10">
+            <text>{{user_info.nickName}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="list-li">
+      <view class="ul">
+        <navigator url="timeline" class="li mgt10">
+          <image src="/image/ico36.png" alt="" />
+          <text>他参与的</text>
+          <text class="to-right-text">20</text>
+          <image class="to-right" src="/image/arrowright.png" alt="" />
+        </navigator>
+        <navigator url="timeline" class="li">
+          <image src="/image/04.jpg"  alt="" />
+          <text>他关注的餐厅</text>
+          <text class="to-right-text">80</text>
+          <image class="to-right" src="/image/arrowright.png" alt="" />
+        </navigator>
+      </view>
+    </view>
+
+  
+
+  <view class="bottom-fixed">
+      <navigator class="bottom-bnt w100">
+          <image src='/image/ico12.png'></image><text class="">聊TA</text>
+       </navigator>
+    </view>
+  </view>
+</page>

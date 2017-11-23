@@ -1,0 +1,64 @@
+/* pages/shop/index.wxss */
+ .shopInfoPagelet {
+    position: relative; 
+}
+ .shopInfoPagelet .imgFrame {
+    position: absolute;
+    display: block;
+    left: 30rpx;
+    top: 20rpx;
+    z-index: 10;
+}
+.imgFrame .imgNum {
+    height: 36rpx;
+    min-width: 70rpx;
+    line-height: 36rpx;
+    background-color: #001;
+    position: absolute;
+    bottom: 20rpx;
+    right: 10rpx;
+    opacity: .6;
+    border-radius: 18rpx;
+    color: #fff;
+    text-align: center;
+    padding: 0 8rpx;
+    box-sizing: border-box;
+}
+.imgFrame image{ width: 180rpx; height: 132rpx;}
+ .shopInfoPagelet .shopPicBg {
+    padding: 30rpx 0 30rpx 232rpx;
+    background-position: 100% 100%;
+    background-color: #f0f0f0;
+}
+.shopInfoPagelet .shopPicBg .shop-name {
+    color: #323232;
+    font-size: 30rpx;
+    line-height: 40rpx;
+    overflow: hidden;
+    display: block;
+}
+ .shopInfoPagelet .shopPicBg .aboutType {
+    color: #999;
+}
+ .shopPicBg  .star {
+    margin-right: 10rpx;
+    vertical-align: -1rpx;
+}
+
+ .shopInfoPagelet .desc {
+
+    box-sizing: border-box;
+    padding: 30rpx 0 30rpx 30rpx;
+    margin-top: 0;
+    color: #999;
+    position: relative;
+    background-color: #fff;
+    background-position: 100% 100%;
+}
+
+.details-mode{ background-color: #fff; position: relative;}
+.details-mode .details-mode-item{ width: 100%;    padding: 30rpx 60rpx 30rpx 80rpx;position: relative;display: block;color: #323232; border-top: 1px solid #eee; box-sizing: border-box;}
+.details-mode image{ width: 30rpx; height: 30rpx; position: absolute; top: 35rpx;}
+.details-mode .details-mode-item-right{ right: 20rpx;top: 38rpx;}
+.details-mode .details-mode-item-left{ left: 25rpx;}
+.details-mode-item-right-2{position: absolute; top: 35rpx;right: 55rpx;}

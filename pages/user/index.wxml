@@ -1,14 +1,16 @@
 <page>
-<view class="container">
-   <view class="banner-class">
-     
-     <view class="l-promo-block-v1-content">
-     
-       <view class="class_img text-center">
-           <image class="_ico" src="{{user_info.avatarUrl}}" alt="" />
-           <view class="mgt10"><text>{{user_info.nickName}}</text></view>
-       </view>
-<!-- 
+  <view class="container">
+    <view class="banner-class">
+
+      <view class="l-promo-block-v1-content">
+
+        <view class="class_img text-center">
+          <image class="_ico" src="{{user_info.avatarUrl}}" alt="" />
+          <view class="mgt10">
+            <text>{{user_info.nickName}}</text>
+          </view>
+        </view>
+        <!-- 
        <view class="ul">
           <view class="li border-none">
            <text>{{user_info.money}}</text>
@@ -23,45 +25,60 @@
            <text>提问数</text>
           </view>
        </view> -->
-     </view>
-   </view>
+      </view>
+    </view>
 
-<view class="list-li">
-        <view class="ul">
-          <navigator url="timeline" class="li mgt10">
-           <image src="../../image/54freesmallicons/clock.png" alt=""/>
-           <text>我吃过的饭</text>
-           <image class="to-right" src="../../image/arrowright.png" alt="" />
-          </navigator>
-          <navigator  url="info" class="li">
-            <image src="../../image/54freesmallicons/briefcase.png" alt="" />
-           <text>帐户设置</text>
-           <image class="to-right" src="../../image/arrowright.png" alt="" />
-          </navigator>
-          <!-- <navigator  url="money" class="li mgt10">
+    <view class="list-li">
+      <view class="ul">
+        <navigator url="timeline" class="li mgt10">
+          <image src="/image/ico36.png" alt="" />
+          <text>我发布的</text>
+          <text class="to-right-text">20</text>
+          <image class="to-right" src="/image/arrowright.png" alt="" />
+        </navigator>
+
+        <navigator url="timeline" class="li mgt10">
+          <image src="/image/ico37.png" alt="" />
+          <text>我参与的</text>
+          <text class="to-right-text">20</text>
+          <image class="to-right" src="/image/arrowright.png" alt="" />
+        </navigator>
+        
+        <navigator url="info" class="li">
+          <image src="/image/01.jpeg" alt="" />
+          <text>帐户设置</text>
+          <image class="to-right" src="/image/arrowright.png" alt="" />
+        </navigator>
+        <!-- <navigator  url="money" class="li mgt10">
            <image src="../../image/54freesmallicons/piggy.png" alt="" />
            <text>我的财务</text>
           <image class="to-right" src="../../image/arrowright.png" alt="" />
           </navigator> -->
-         
-          <navigator  url="noti" class="li mgt10">
-           <image src="../../image/54freesmallicons/drop.png" alt="" />
-           <text>消息</text>
-           <image class="to-right" src="../../image/arrowright.png" alt="" />
-          </navigator>
-          
-<contact-button class="li mgt10"
-  type="default-light" 
-  size="100"
-  session-from="weapp"
->
-<image src="../../image/54freesmallicons/piggy.png" alt="" />
-           <text>投诉建议</text>
-          <image class="to-right" src="../../image/arrowright.png" alt="" />
-</contact-button>
-      
-        </view>
-       </view>
+  <view class="list-li">
+      <view class="ul">
+        <navigator url="timeline" class="li mgt10">
+          <image src="/image/04.jpg"  alt="" />
+          <text>他关注的餐厅</text>
+          <text class="to-right-text">80</text>
+          <image class="to-right" src="/image/arrowright.png" alt="" />
+        </navigator>
+      </view>
+    </view>
+        <navigator url="noti" class="li mgt10">
+          <image src="/image/ico35.png" alt="" />
+          <text>消息</text>
+           <text class="to-right-text" style='color:#000'>20</text>
+          <image class="to-right" src="/image/arrowright.png" alt="" />
+        </navigator>
 
-   </view>
+        <contact-button class="li mgt10" type="default-light" size="100" session-from="weapp">
+          <image src="/image/ico12.png" alt="" />
+          <text>投诉建议</text>
+          <image class="to-right" src="/image/arrowright.png" alt="" />
+        </contact-button>
+
+      </view>
+    </view>
+
+  </view>
 </page>

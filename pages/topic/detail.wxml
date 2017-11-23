@@ -1,0 +1,114 @@
+<page>
+  <view class="container">
+    <!--头部-->
+    <view class="topic_head pd10 bgw">
+      <navigator url="/pages/user/profile">
+        <image class="avatar" src="{{data.user.avatarUrl}}"></image>
+      </navigator>
+      <view class="pull-left mgt5">
+        <navigator url="/pages/user/profile">
+          <text>{{data.user.nickName}}</text>
+        </navigator>
+        <text class="light">{{data.timeTran}}</text>
+      </view>
+      <view class='ico pull-right mgt5'>
+        <image src="/image/share@2x.png"></image>
+      </view>
+      <view class='clear'></view>
+    </view>
+    <!--正文-->
+    <view class="topic_content pd10 bgw">
+      {{data.content}}
+      <block wx:for="{{data.imgList}}" wx:for-index="idx" wx:for-item="image">
+        <image bindtap="previewImage" src="{{image}}" />
+      </block>
+    </view>
+    <text class="light  p pd10">报名限制及人均消费</text>
+    <view class="pd10 bgw">
+      <view class="pull-left">男女均可</view>
+      <view class="pull-right">200元〜400元</view>
+      <view class='clear'></view>
+    </view>
+
+    <text class="light  p pd10">就餐地点</text>
+    <navigator url="/pages/shop/index" class="pd10 bgw">
+      <view class="pull-left">
+        <image src="/image/04.jpg" class="smallimg"></image>
+        <text class="blue">一城一味</text>
+      </view>
+      <view class="pull-right">200m
+        <image class="to-right" class="smallimg" src="/image/arrowright.png" alt="" />
+      </view>
+      <view class='clear'></view>
+    </navigator>
+    <text class="light  p pd10">就餐时间及人数</text>
+    <view class=" pd10 bgw">
+      <view class="pull-left"> 2017.12.4 9:00 </view>
+      <view class="pull-right">2~3人</view>
+      <view class='clear'></view>
+    </view>
+
+    <!--点赞  -->
+    <view class="light  p pd10 mgt5">
+      <!-- <text class="pull-left blue">点赞</text> -->
+      <text class="pull-left ">赞(1020)</text>
+      <view class='clear'></view>
+    </view>
+    <view class="column_like pd10 bgw">
+      <view class="pull-left images">
+        <image src='/image/01.jpeg'></image>
+        <image src='/image/user.jpeg'></image>
+        <image src='/image/inc13.png'></image>
+        <image src='/image/inc13.png'></image>
+        <view class="icon-ic_like_more">...</view>
+      </view>
+      <view class='ico pull-right'>
+        <!-- <image src="/image/ico2@2x.png"></image> -->
+        <text class="blue">点赞</text>
+      </view>
+      <view class='clear'></view>
+    </view>
+
+
+    <!--评论-->
+
+    <view class="light  p pd10 mgt5">
+      <!-- <text class="pull-left blue" bindtap="reply">写留言</text> -->
+      <text class="pull-left ">讨论(1020)</text>
+      <view class='clear'></view>
+    </view>
+    <!-- <view class='commentBox'>
+     <view class="pull-left">
+      <image class="avatar" alt="温作权" src="/image/01.jpeg" > </image>
+     </view>
+     <view class="pull-left">
+      <text>写下你的评论</text>
+     </view>
+           <view class='clear'></view>
+     </view> -->
+    <include src="../include/comment.wxml" />
+    <!--//回复按键-->
+
+  </view>
+
+  <view style='height:80rpx'></view>
+  <view class="bottom-fixed">
+    <view class="bottom-bnt w50" bindtap="reply">参与讨论</view>
+    <view class="bottom-bnt-line"></view>
+    <view class="bottom-bnt w50">报名</view>
+  </view>
+  <!--弹出层-->
+  <view class="popup {{popup==1?'modal-in':'none'}}">
+    <form bindsubmit="formSubmit">
+      <view class="reply">
+        <textarea name="content" value="{{reply.value}}" auto-height placeholder="{{reply.placeholder}}" />
+        <view class="reply-button">
+          <button type="default" size="mini" bindtap="btn_cancel"> 取消 </button>
+
+          <button type="primary" style='background:#000' size="mini" loading="{{loading}}" disabled="{{disabled}}" formType="submit"> 提交 </button>
+        </view>
+      </view>
+    </form>
+  </view>
+  <!--弹出层-->
+</page>

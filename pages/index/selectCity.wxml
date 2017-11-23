@@ -1,0 +1,60 @@
+<!--pages/index/selectCity.wxml-->
+<view class="container" style='padding-top:20rpx;'>
+
+  <view class="J_search_trigger" >
+    <input placeholder='输入城市或拼音查询'></input>
+  </view>
+  <view class="cityItem mgt10">上海
+    <text class="f12 muted ">GPS 定位</text>
+  </view>
+
+  <view class="cityBlock">
+    <view class="muted cityTitle">热门城市</view>
+    <view class="hot">
+      <view class="cityItem">上海 </view>
+      <view class="cityItem">北京 </view>
+      <view class="cityItem">深圳 </view>
+      <view class="cityItem">成都 </view>
+      <view class="cityItem">深圳 </view>
+      <view class='clear'></view>
+    </view>
+  </view>
+
+  <view class="muted cityTitle">更多城市</view>
+  <view class="cityNav">
+    <view class="i">A</view>
+    <view class="i">B</view>
+    <view class="i">C</view>
+    <view class="i">D</view>
+    <view class="i">E</view>
+    <view class="i">A</view>
+    <view class="i">B</view>
+    <view class="i">C</view>
+    <view class="i">D</view>
+    <view class="i">E</view>
+     <view class="i">C</view>
+    <view class="i">D</view>
+    <view class="i">E</view>
+     <view class='clear'></view>
+  </view>
+
+  <view class="cityBlock">
+    <view class="muted cityTitle">A</view>
+    <view class="cityItem">上海 </view>
+    <view class="line"></view>
+    <view class="cityItem">上海 </view>
+    <view class="line"></view>
+    <view class="cityItem">上海 </view>
+    <view class="line"></view>
+  </view>
+
+  <view class="cityBlock">
+    <view class="muted cityTitle">B</view>
+    <view class="cityItem">上海 </view>
+    <view class="line"></view>
+    <view class="cityItem">上海 </view>
+    <view class="line"></view>
+    <view class="cityItem">上海 </view>
+    <view class="line"></view>
+  </view>
+</view>

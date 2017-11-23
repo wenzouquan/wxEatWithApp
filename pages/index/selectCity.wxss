@@ -1,0 +1,16 @@
+/* pages/index/selectCity.wxss */
+
+.cityItem{ background: #fff; padding:25rpx 20rpx; text-align: left;}
+.cityTitle{padding: 15rpx 20rpx;}
+.hot .cityItem{ float: left; margin-left: 10rpx; margin-right: 10rpx; width: 30%; box-sizing: border-box; text-align: center; margin-bottom: 10rpx;}
+.cityBlock{ width: 100%;}
+.cityBlock .line{ margin: 0px 10rpx;}
+.cityBlock .line:last-child{border: none}
+.cityBlock{ margin-top: 20rpx;}
+
+.cityNav{background: #fff; margin-top: 20rpx;}
+.cityNav .i{ float: left ;     line-height: 96rpx;
+    border-bottom: 1rpx solid #ededed;
+    border-right: 1rpx solid #ededed;
+    text-align: center;
+    color: #323232;    width: 20% ; box-sizing: border-box}

@@ -1,0 +1,6 @@
+/* pages/topic/detail.wxss */
+.media-act image{ width: 36rpx; height: 36rpx; margin-left: 8rpx;}
+.media{ margin-top: 0rpx;}
+.reply{ width: 100%;}
+.commentBox{  background: #fff; }
+.commentBox .avatar{ width: 60rpx; height: 60rpx; border-radius: 50%;}

@@ -1,0 +1,65 @@
+<template name="timeline">
+  <scroll-view scroll-y="true" bindscrolltolower="scrolltolower" lower-threshold="50" style="height:100%">
+    <view class="unstyled myfeed after_div" style="border:none">
+      <block wx:for="{{listData}}" wx:for-index="idx" wx:for-item="item">
+        <navigator url="/pages/topic/detail?id={{item.id}}" class="media">
+          <view  class="avatar pull-left">
+            <image src="{{item.user.avatarUrl}}"></image>
+          </view>
+          <view class="media-body lineHContent">
+            <view class="media-heading">
+              <view class="pull-left">
+               <view class="blue"> {{item.user.nickName}}
+                <text class="f12 muted ">就餐时间:</text> 2017.12.4 9:00
+                </view>
+            </view>
+              <view class='ico pull-right'>
+                <image src="/image/share@2x.png"></image>
+              </view>
+              <view class='clear'></view>
+              
+            </view>
+
+            <view class="media-heading">
+              <view >{{item.content}}</view>
+            </view>
+
+             <view class="mgt5 clearfix">
+              <view class="pull-left">
+               <image class="smallimg" src='/image/04.jpg'></image>一味一城 </view>
+              <view class="pull-right"><text class="f12 muted ">12km</text></view>
+              <view class='clear'></view>
+            </view> 
+            <!--操作 -->
+            <view class='line mgt5'></view>
+            <view class="mgt5 media-act">
+
+              <view class='ico pull-left'>
+                <view>
+                  <image src="/image/ico1@2x.png"></image>
+                  <text>讨论(99+)</text>
+                </view>
+              </view>
+
+              <view class='ico pull-left'>
+                <image src="/image/ico2@2x.png"></image>
+                <text>赞(99+)</text>
+              </view>
+              <view class='ico pull-right' style='margin-right: 0rpx;'>
+                <view>
+                  <image src="/image/user.jpeg"></image>
+                  <text>报名(99+)</text>
+                </view>
+              </view>
+              <view class='clear'></view>
+            </view>
+
+
+            <!-- <view class="mgt5"><text class="f12 muted ">{{item.timeTran}}</text> </view>  -->
+          </view>
+        </navigator>
+      </block>
+    </view>
+    <view style='height:120rpx'></view>
+  </scroll-view>
+</template>

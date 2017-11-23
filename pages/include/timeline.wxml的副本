@@ -1,0 +1,79 @@
+<template name="timeline">
+  <scroll-view scroll-y="true" bindscrolltolower="scrolltolower" lower-threshold="50" style="height:100%">
+    <view class="unstyled myfeed after_div" style="border:none">
+      <block wx:for="{{listData}}" wx:for-index="idx" wx:for-item="item">
+
+        <navigator url="/pages/topic/detail?id={{item.id}}" class="media-new">
+          <view class="media-new-left">
+            <view class="media-new-left-text text-date">
+              <view class="text-date-line">就餐时间</view>
+              <text class="text-date-num">2017.12.11 17:40</text>
+            </view>
+            <view class="clear"></view>
+            <view class="media-new-left-text" style='margin-top:30rpx'>
+              <text class="strong">30</text> 元/人</view>
+            <view class="media-new-left-text">
+              <text class="strong">限女性</text> 要求</view>
+            <view class="media-new-left-text">
+              <text class="strong">2〜3</text> 人数</view>
+          </view>
+          <view class="media-new-right">
+            <image class="media-cover" mode="widthFix" src='{{item.picUrl}}'></image>
+          </view>
+          <view class='clear'></view>
+          <view class="media-part">
+            <view class="media-new-left">
+              <view class='media-tag'>一顿美食</view>
+            </view>
+            <view class="media-new-right">
+              <text class="pull-left media-title">一城一味</text>
+              <text class="pull-right light mgr10">1.2km</text>
+            </view>
+            <view class='clear'></view>
+          </view>
+          <view class="media-part">
+            <view class="media-new-left">
+              <view class="avatar pull-left">
+                <image src="{{item.user.avatarUrl}}"></image>
+              </view>
+              <view class="">
+                {{item.user.nickName}}
+              </view>
+            </view>
+            <view class="media-new-right media-info">
+              <view> {{item.content}}</view>
+              <view class="mgt10">
+                <!--操作 -->
+                <view class="mgt5 media-act">
+
+                  <view class='ico pull-left'>
+                    <view>
+                      <image src="/image/ico1@2x.png"></image>
+                      <text>讨论(99+)</text>
+                    </view>
+                  </view>
+
+                  <view class='ico pull-left mgl10'>
+                    <image src="/image/ico2@2x.png"></image>
+                    <text>赞(99+)</text>
+                  </view>
+                  <view class='ico pull-right' style='margin-right: 10rpx;'>
+                    <view>
+                      <image src="/image/user.jpeg"></image>
+                      <text>报名(99+) </text>
+                    </view>
+                  </view>
+                  <view class='clear'></view>
+                </view>
+              </view>
+            </view>
+            <view class='clear'></view>
+          </view>
+
+
+        </navigator>
+      </block>
+    </view>
+    <view style='height:120rpx'></view>
+  </scroll-view>
+</template>
