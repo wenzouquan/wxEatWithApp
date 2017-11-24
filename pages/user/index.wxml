@@ -44,11 +44,11 @@
           <image class="to-right" src="/image/arrowright.png" alt="" />
         </navigator>
         
-        <navigator url="info" class="li">
+        <!-- <navigator url="info" class="li">
           <image src="/image/01.jpeg" alt="" />
           <text>帐户设置</text>
           <image class="to-right" src="/image/arrowright.png" alt="" />
-        </navigator>
+        </navigator> -->
         <!-- <navigator  url="money" class="li mgt10">
            <image src="../../image/54freesmallicons/piggy.png" alt="" />
            <text>我的财务</text>

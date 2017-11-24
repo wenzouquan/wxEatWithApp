@@ -1,7 +1,7 @@
 /**index.wxss**/
 .map{ flex:1; height: 100%; }
 .map #map{ border: none}
-.list-header{background-color:#ffffff; height: 100rpx;border-bottom: 1px solid #eee;position:fixed; top: 0rpx; left: 0rpx; width: 100%;z-index: 9999}
+.list-header{background-color:#ffffff; height: 100rpx;border-bottom: 1px solid #eee;position:fixed; top: -2rpx; left: 0rpx; width: 100%;z-index: 9999;box-sizing: border-box;  }
 .header{position: absolute; top: 20rpx;background-color:#ffffff; border-radius: 20rpx; padding: 10rpx; border: 1px solid #ccc; }
 .header cover-image,.header image{ width: 40rpx; height: 40rpx;display:block;line-height:1.2;
 }

@@ -2,6 +2,9 @@
 //获取应用实例
 var app = getApp();
 Page({
+  data: {
+    user_info:{}
+  },
   onLoad: function (options) {
     var that = this;
     var user_info=wx.getStorageSync('user_info');

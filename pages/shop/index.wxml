@@ -76,7 +76,7 @@
   <view class="bottom-fixed">
     <view class="bottom-bnt w50">关注</view>
     <view class="bottom-bnt-line"></view>
-    <navigator class="bottom-bnt w50" url="/pages/index/issue">找人去吃饭</navigator>
+    <navigator class="bottom-bnt w50" url="/pages/index/issue">在这里拼单</navigator>
   </view>
   
 </view>

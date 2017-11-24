@@ -1,8 +1,9 @@
 
 {
   "pages":[
-    "pages/index/index",
+    "pages/user/chat",
     "pages/user/profile",
+    "pages/index/index",
     "pages/user/index",
     "pages/shop/index",
     "pages/topic/detail",

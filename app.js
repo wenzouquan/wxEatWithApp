@@ -2,6 +2,9 @@
 App({
   data:{
     'apiHost':'http://www.eatwith.me/',
+    socketOpen:false,
+    socketMsgQueue:[],
+    socketRevQueue:{}
   },
   onLaunch: function () {
     //调用API从本地缓存中获取数据
@@ -175,7 +178,9 @@ App({
     })
   },
    onLaunch: function (options) {
-     console.log(options);
+     //建connectSocket
+     this.connectSocket();
+     //console.log(options);
     // Do something initial when launch.
   },
    /**参数说明：
@@ -192,6 +197,51 @@ App({
      var s = str.substring(0, len) + "...";
      return s;
    },
+   sendSocketMessage:function(data){
+     var data = JSON.stringify(data);
+     if (this.data.socketOpen === false) {
+       this.data.socketMsgQueue.push(data);
+     }else{
+       wx.sendSocketMessage({
+         data: data
+       });
+     }
+   },
 
+  revMessage(k,fn){
+    this.data.socketRevQueue[k] = fn;
+  },
+   
+  //connectSocket
+   connectSocket:function(data){
+     var that =this;
+     wx.connectSocket({
+       url: 'ws://127.0.0.1:9501'
+     });
+     wx.onSocketOpen(function (res) {
+       console.log('onSocketOpen');
+       that.data.socketOpen = true
+       console.log(that.data.socketMsgQueue);
+       for (var i = 0; i < that.data.socketMsgQueue.length; i++) {
+         wx.sendSocketMessage({
+           data: that.data.socketMsgQueue[i]
+         });
+       }
+       that.data.socketMsgQueue = []
+     })
+
+     wx.onSocketMessage(function (r) {
+       var res = JSON.parse (r.data);
+       var key = res.dosometing;
+       if (key && that.data.socketRevQueue[key] && typeof (that.data.socketRevQueue[key])=="function"){
+         that.data.socketRevQueue[key](res);
+       }
+      // console.log('收到服务器内容：', res);
+     })
+
+     wx.onSocketError(function (res) {
+       console.log('WebSocket连接打开失败，请检查！')
+     })
+   }
 
 })

@@ -1,0 +1,62 @@
+<!--pages/user/chat.wxml-->
+<view class="container chatBox">
+  <view class="fromChatBox">
+    <view class="fromChatBoxLeft">
+      <image src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1629089538,987246310&fm=27&gp=0.jpg'></image>
+    </view>
+    <view class="fromChatBoxright">
+      <!-- <text> 只要搭乘上共享经济的飞船各种。在不断膨胀的共享经济星系里“新华视点”记者初步梳理发现</text> -->
+      <image class="chatimg" mode="widthFix" src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511521159413&di=f0692f16485d14d7884c88af81dcd7e8&imgtype=0&src=http%3A%2F%2Fnews.cnhubei.com%2Fxw%2Fgn%2F201711%2FW020171123766102711768.jpg'></image>
+    </view>
+    <view class="clear"></view>
+  </view>
+
+  <view class="ToChatBox">
+    <view class="ToChatBoxLeft">
+      <view class="text"> 在不断膨胀的共享经济星系里“新华视点”记者初步梳理发现
+        <image class="smile" src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1629089538,987246310&fm=27&gp=0.jpg'></image>
+      </view>
+      <!-- <image  class="chatimg" mode="widthFix" src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511521159413&di=f0692f16485d14d7884c88af81dcd7e8&imgtype=0&src=http%3A%2F%2Fnews.cnhubei.com%2Fxw%2Fgn%2F201711%2FW020171123766102711768.jpg'></image>  -->
+    </view>
+    <view class="ToChatBoxright">
+      <image src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1629089538,987246310&fm=27&gp=0.jpg'></image>
+    </view>
+    <view class="clear"></view>
+  </view>
+  <view class="chatBnt">
+    <view class="chatBntVoice">
+      <image src='/image/voice.png'></image>
+    </view>
+    <view class="chatBntInput">
+      <input></input>
+    </view>
+    <view class="chatBntSmile">
+      <image src='/image/emoji.png'></image>
+    </view>
+    <view class="chatBntAct">
+      <image src='/image/addition.png'></image>
+    </view>
+    <view class="chatBntBox">
+      <view class="ActImages">
+        <view class="ActImagesOne">
+          <image src='/image/10.png'></image>
+          <text>照片</text>
+          <view class="clear"></view>
+        </view>
+        <view class="ActImagesOne">
+          <image src='/image/09.png'></image>
+          <text>拍照</text>
+          <view class="clear"></view>
+        </view>
+        <view class="ActImagesOne">
+          <image src='/image/11.png'></image>
+          <text>位置</text>
+          <view class="clear"></view>
+        </view>
+      </view>
+      <scroll-view>
+         
+      </scroll-view>
+    </view>
+  </view>
+</view>

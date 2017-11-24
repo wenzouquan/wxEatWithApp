@@ -8,9 +8,9 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.6.4",
+	"libVersion": "1.0.0",
 	"appid": "wx61ce8c6ace48a236",
-	"projectname": "%E6%8B%BC%E5%90%83%E9%A5%AD",
+	"projectname": "拼单吃饭",
 	"condition": {
 		"search": {
 			"current": -1,

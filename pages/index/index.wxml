@@ -1,11 +1,11 @@
 <view class="map  {{showType==1?'':'none'}}">
   <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="12" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 100%;">
     <cover-view class="header header-left" bindtap="jumpUser">
-      <cover-image src='../../image/01.jpeg' alt="用户中心"></cover-image>
+      <cover-image src='/image/01.jpeg' alt="用户中心"></cover-image>
     </cover-view>
 
     <cover-view class="header header-right" bindtap="changeViwe">
-      <cover-image src="../../image/list.jpeg" alt="列表"></cover-image>
+      <cover-image src="/image/list.jpeg" alt="列表"></cover-image>
     </cover-view>
 
     <cover-view class="bottom">
@@ -19,7 +19,7 @@
 <view catchtap="bodyclick" class="list-view {{showType==2?'':'none'}}">
   <view class='list-header'>
     <view class="header header-left" bindtap="jumpUser">
-      <image src='../../image/01.jpeg' alt="用户中心"></image>
+      <image src='/image/01.jpeg' alt="用户中心"></image>
     </view>
 
      <navigator url="/pages/index/selectCity"  class="header header-center">上海 [切换城市]</navigator>
@@ -28,7 +28,7 @@
     </view>
 
     <view class="header header-right" bindtap="changeViwe">
-      <image src='../../image/05.jpg' alt="列表"></image>
+      <image src='/image/05.jpg' alt="列表"></image>
     </view>
   </view>
   <!-- 排序 -->
@@ -46,7 +46,7 @@
     <template is="timeline" data="{{listData: listData}}" />
   </view>
   <view class="list-bottom">
-    <view bindtap="jumpIssue" class="list-bottom-btn pull-right">找人吃饭</view>
-    <view class="list-bottom-count pull-right">共1045位饭友正在附近觅食 </view>
+    <view bindtap="jumpIssue" class="list-bottom-btn pull-right">找人拼单</view>
+    <view class="list-bottom-count pull-right">共1045位饭友正在附近拼单 </view>
   </view>
 </view>
