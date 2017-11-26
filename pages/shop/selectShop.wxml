@@ -1,37 +1,53 @@
 <!--pages/shop/selectShop.wxml-->
 <view class="container">
-  <view class="overlay none"></view>
+  <view  data-id="0" bindtap="changeSelector" class="overlay {{selectorValue>0?'':'none'}}"></view>
   <view class='searchTop'>
     <view class="J_search_trigger">
       <input placeholder='输入城市或拼音查询'></input>
     </view>
     <view class="list-nav border-bottom-new">
       <view class="cat Fix">
-        <view class="item" bindtap="changeOrder">商圈
+        <view class="item" data-id="1" bindtap="changeSelector">商圈
           <text class="drop"></text>
         </view>
-        <view class="item">
+        <view class="item" data-id="2" bindtap="changeSelector">
           美食
           <text class="drop"></text>
         </view>
-        <view class="item">
+        <view class="item" data-id="3" bindtap="changeSelector">
           智能排序
           <text class="drop"></text>
         </view>
       </view>
     </view>
-    <view class="selector none" scroll-y>
+    <view class="selector {{selectorValue==2?'':'none'}}" scroll-y>
       <scroll-view class="selector-main-100" scroll-y>
         <view data-parentid="0">
-          <text class="item Fix on">附近</text>
+          <text class="item Fix on">全部美食</text>
         </view>
         <view data-parentid="0">
-          <text class="item Fix">附近</text>
+          <text class="item Fix">日本菜</text>
+        </view>
+        <view data-parentid="0">
+          <text class="item Fix">咖啡厅</text>
+        </view>
+      </scroll-view>
+    </view>
+     <view class="selector {{selectorValue==3?'':'none'}}" scroll-y>
+      <scroll-view class="selector-main-100" scroll-y>
+        <view data-parentid="0">
+          <text class="item Fix on">智能排序</text>
+        </view>
+        <view data-parentid="0">
+          <text class="item Fix">离我最近</text>
+        </view>
+        <view data-parentid="0">
+          <text class="item Fix">人气最高</text>
         </view>
       </scroll-view>
     </view>
 
-    <view class="selector none">
+    <view class="selector  {{selectorValue==1?'modal-in':'none'}}">
       <scroll-view class="selector-main" scroll-y>
         <view data-parentid="0">
           <text class="item Fix on">附近</text>

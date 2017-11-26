@@ -12,13 +12,15 @@
 .chatimg{ max-width: 100%;}
 .chatBox .smile{ width: 30rpx; height: 30rpx; vertical-align:-4rpx; margin: 0 2rpx;}
 .chatBnt{ bottom: 0; width: 100%;  position: fixed; left: 0; min-height: 90rpx; border-top:1px solid #eee;}
-.chatBntInput{ position: absolute; left: 70rpx;}
-.chatBntVoice{ position: absolute; top: 20rpx;}
-.chatBntSmile{ position: absolute; top: 20rpx; right: 100rpx;}
+.chatBntInput{ position: absolute;   width: 100%; padding-left: 70rpx; padding-right:170rpx; box-sizing: border-box ;z-index: 0 }
+.chatBntVoice{ position: absolute; top: 20rpx; z-index: 2}
+.chatBntSmile{ position: absolute; top: 20rpx; right: 100rpx;z-index: 2}
 .chatBntAct{ position: absolute; top: 20rpx; right: 35rpx;}
 .chatBntVoice image,.chatBntAct image,.chatBntSmile image{ width: 55rpx; height: 55rpx; }
-.chatBntInput input{ width: 520rpx; height: 70rpx; border-bottom: 1px solid #eee; border-radius: 10rpx;}
+.chatBntInput input{ width: 100%; height: 70rpx; border-bottom: 1px solid #eee; border-radius: 10rpx;}
 .chatBntBox{ width: 100%; height: 300rpx; border-top:1px solid #eee; margin-top: 90rpx; }
 .ActImages image{ width: 50rpx; height: 50rpx; display: block; padding: 20rpx; border: 1px solid #eee; border-radius:15rpx; margin: 0 auto }
 .ActImages text{ width: 100%; display: block; text-align: center; margin-top: 5rpx;}
 .ActImagesOne{ float: left; margin-top: 40rpx; margin-left: 20rpx;width: 100rpx; height: 100rpx; color: #555; }
+.simleList image{ width: 55rpx; height: 55rpx;}
+.chatBntRecord{ text-align: center; line-height: 90rpx;}

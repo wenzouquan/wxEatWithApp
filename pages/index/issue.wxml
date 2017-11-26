@@ -62,7 +62,7 @@
       <text>芝麻信用600分以上，安全可信任</text>
     </view>
     <view class="bottom-fixed">
-      <navigator class="bottom-bnt w40" open-type="navigateBack" delta="1">返回</navigator>
+      <navigator  class="bottom-bnt w40" open-type="navigateBack" delta="1">返回</navigator>
       <navigator class="bottom-bnt w60" bindtap="post" >确认发布</navigator>
     </view>
   </view>

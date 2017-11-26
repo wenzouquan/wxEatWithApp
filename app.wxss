@@ -60,7 +60,8 @@ page {
 .inline{ display: inline}
 .pull-left{ float: left}
 
-.media{  padding: 20rpx 0rpx ; background-color: #fff; margin-top: 20rpx}
+.media{  padding: 20rpx 0rpx ; background-color: #fff; }
+
 .media .avatar{ width: 70rpx; margin-left: 10rpx;}
 .media .avatar image{ width: 70rpx; height: 70rpx; border-radius: 50%;}
 .pull-right{ float: right}
@@ -142,7 +143,7 @@ page {
 ._ico{ border-radius: 50%;}
 .title{ font-size: 36rpx; line-height: 50rpx; font-weight: bold;}
 
-.topic_head{  border-bottom: 1px solid #ededed; }
+.topic_head{  border-bottom: 1px solid #ededed; padding:10rpx 10rpx 10rpx 0rpx ; }
 .topic_head .avatar{ width: 80rpx;margin-top: 5rpx; height: 80rpx; border-radius: 50%; float: left;}
 
 .topic_head text{display: block }
@@ -283,7 +284,7 @@ to { -webkit-transform: translate3d(0,100%,0);
 .bottom-fixed{ z-index: 999; position: fixed; width: 100%; height: 100rpx; bottom: -2rpx; background: #fff; box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1); background: #000; box-sizing: border-box;  }
 .bottom-bnt image{ width: 30rpx; height: 30rpx; vertical-align: -3rpx; margin-right: 10rpx;}
 
-.media-new{ background: #fff; width: 100%; padding-bottom: 20rpx;padding-top: 20rpx; box-sizing: border-box;margin-top: 30rpx;}
+.media-new{ background: #fff; width: 100%; padding-bottom: 20rpx;padding-top: 20rpx; box-sizing: border-box; }
 .media-new-left{ width: 25%;float: left; box-sizing: border-box; padding-right: 20rpx;}
 .media-new-right{ width: 75%; float: left;box-sizing: border-box;  }
 .media-new-right .media-cover{ width: 100%; }
@@ -299,3 +300,9 @@ to { -webkit-transform: translate3d(0,100%,0);
 .media-new .ico  text{ margin-left: 8rpx ; }
 .text-date{ background: #c00; color: #fff; width: 100%;  float: right; box-sizing: border-box; padding: 10rpx;}
 .text-date-line{ font-size: 20rpx; margin-bottom:10rpx; padding-top: 10rpx; }
+.bottom-bnt-small{ float: left; margin-left: 50rpx;}
+.bottom-bnt-small image{ display: block; width: 50rpx; height: 50rpx; margin-top: 10rpx; margin-left: 8rpx;}
+.bottom-bnt-small text{ color: #555;display: block; text-align: center; line-height: 25rpx; margin-top: 3rpx;}
+.tab{ background: #fff; width: 100%;  border-bottom: 1px solid #eee; height: 80rpx; box-sizing: border-box}
+.tab .tabli{ float: left; width: 220rpx; text-align: center; line-height: 80rpx; height: 80rpx;  box-sizing: border-box;}
+.tab .tabli.on{ background: #000; color: #fff;}

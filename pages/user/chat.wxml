@@ -24,20 +24,22 @@
     <view class="clear"></view>
   </view>
   <view class="chatBnt">
-    <view class="chatBntVoice">
+    <view class="chatBntVoice" data-id="3"  bindtap='showBntAct'>
       <image src='/image/voice.png'></image>
     </view>
     <view class="chatBntInput">
-      <input></input>
+       <view bindtouchend='stopRecord'  bindtouchstart='startRecord' class="chatBntRecord {{showChatBntBox==3?'':'none'}}">{{chatBntRecordText}}</view>
+       <input class="{{showChatBntBox==3?'none':''}}"  bindfocus="inputFocus"></input>
+
     </view>
-    <view class="chatBntSmile">
+    <view class="chatBntSmile" data-id="2" bindtap='showBntAct'>
       <image src='/image/emoji.png'></image>
     </view>
-    <view class="chatBntAct">
+    <view class="chatBntAct" data-id="1" bindtap='showBntAct'>
       <image src='/image/addition.png'></image>
     </view>
-    <view class="chatBntBox">
-      <view class="ActImages">
+    <view class="chatBntBox {{(showChatBntBox==1 || showChatBntBox==2)?'':'none'}}">
+      <view class="ActImages {{showChatBntBox==1?'':'none'}}">
         <view class="ActImagesOne">
           <image src='/image/10.png'></image>
           <text>照片</text>
@@ -54,7 +56,9 @@
           <view class="clear"></view>
         </view>
       </view>
-      <scroll-view>
+      <scroll-view class="simleList {{showChatBntBox==2?'':'none'}}">
+        <image src='/image/emoji.png'></image>
+        <image src='/image/emoji.png'></image>
          
       </scroll-view>
     </view>

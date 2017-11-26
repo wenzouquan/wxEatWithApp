@@ -1,7 +1,7 @@
 <page>
   <view class="container">
     <!--头部-->
-    <view class="topic_head pd10 bgw">
+    <view class="topic_head bgw">
       <navigator url="/pages/user/profile">
         <image class="avatar" src="{{data.user.avatarUrl}}"></image>
       </navigator>
@@ -62,10 +62,10 @@
         <image src='/image/inc13.png'></image>
         <view class="icon-ic_like_more">...</view>
       </view>
-      <view class='ico pull-right'>
-        <!-- <image src="/image/ico2@2x.png"></image> -->
+      <!-- <view class='ico pull-right'>
+         <image src="/image/ico2@2x.png"></image> 
         <text class="blue">点赞</text>
-      </view>
+      </view> -->
       <view class='clear'></view>
     </view>
 
@@ -91,10 +91,18 @@
 
   </view>
 
-  <view style='height:80rpx'></view>
+  <view style='height:110rpx'></view>
   <view class="bottom-fixed">
-    <view class="bottom-bnt w50" bindtap="reply">参与讨论</view>
-    <view class="bottom-bnt-line"></view>
+    <view class="bottom-bnt w50 bgw">
+       <view class="bottom-bnt-small">
+         <image src="/image/ico2@2x.png"></image>
+        <text>点赞</text>
+       </view>
+       <view class="bottom-bnt-small">
+         <image src="/image/ico1@2x.png"></image>
+        <text>讨论</text>
+       </view>
+    </view>
     <view class="bottom-bnt w50">报名</view>
   </view>
   <!--弹出层-->

@@ -1,5 +1,5 @@
-<template name="timeline">
-  <scroll-view scroll-y="true" bindscrolltolower="scrolltolower" lower-threshold="50" style="height:100%">
+<template name="timelineBak">
+  <scroll-view data-id="timelineBak" scroll-y="true" bindscrolltolower="scrolltolower" lower-threshold="50" style="height:{{windowHeight?windowHeight:300}}px">
     <view class="unstyled myfeed after_div" style="border:none">
       <block wx:for="{{listData}}" wx:for-index="idx" wx:for-item="item">
 
@@ -26,7 +26,7 @@
               <view class='media-tag'>一顿美食</view>
             </view>
             <view class="media-new-right">
-              <text class="pull-left media-title">一城一味</text>
+              <text class="pull-left media-title">{{item.title}}</text>
               <text class="pull-right light mgr10">1.2km</text>
             </view>
             <view class='clear'></view>
@@ -74,6 +74,6 @@
         </navigator>
       </block>
     </view>
-    <view style='height:120rpx'></view>
+    <view style='height:300rpx'></view>
   </scroll-view>
 </template>

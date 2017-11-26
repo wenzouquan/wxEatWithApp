@@ -1,11 +1,11 @@
-// pages/shop/selectShop.js
+// pages/topic/detai.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    selectorValue:0,
+  
   },
 
   /**
@@ -62,9 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-  changeSelector:function(e){
-    var id = e.currentTarget.dataset.id;
-    this.setData({ selectorValue: id });
   }
 })

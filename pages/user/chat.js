@@ -6,7 +6,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    chatBntRecordText:'长按开始录音',
+    showChatBntBox:3,
+    showRecordVaule:0
   },
 
   /**
@@ -28,6 +30,7 @@ Page({
     })
   },
 
+ 
 
 
   /**
@@ -77,5 +80,21 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  showBntAct:function(e){
+    var id = e.currentTarget.dataset.id;
+    this.data.showChatBntBox != id ? this.setData({ showChatBntBox: id}) : this.setData({ showChatBntBox:0})
+    console.log(id);
+  },
+  inputFocus:function(){
+    this.setData({ showChatBntBox: 0 });
+  },
+  startRecord:function(){
+    this.setData({ chatBntRecordText:'录音中'});
+    console.log('startRecord');
+  },
+  stopRecord:function(){
+    this.setData({ chatBntRecordText: '长按开始录音' });
+    console.log('stopRecord');
   }
 })

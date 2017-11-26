@@ -1,5 +1,5 @@
 <template name="timeline">
-  <scroll-view scroll-y="true" bindscrolltolower="scrolltolower" lower-threshold="50" style="height:100%">
+  <scroll-view data-id="timeline" scroll-y="true" bindscrolltolower="scrolltolower" lower-threshold="50" style="height:{{windowHeight?windowHeight:300}}px">
     <view class="unstyled myfeed after_div" style="border:none">
       <block wx:for="{{listData}}" wx:for-index="idx" wx:for-item="item">
         <navigator url="/pages/topic/detail?id={{item.id}}" class="media">
@@ -60,6 +60,6 @@
         </navigator>
       </block>
     </view>
-    <view style='height:120rpx'></view>
+    <view style='height:320rpx'></view>
   </scroll-view>
 </template>

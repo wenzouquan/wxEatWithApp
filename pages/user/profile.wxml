@@ -33,7 +33,7 @@
   
 
   <view class="bottom-fixed">
-      <navigator url='/pages/user/webSocket' class="bottom-bnt w100">
+      <navigator url='/pages/user/chat' class="bottom-bnt w100">
           <image src='/image/ico12.png'></image><text class="">聊TA</text>
        </navigator>
     </view>

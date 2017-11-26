@@ -12,15 +12,6 @@ Page({
   
   intData:function(){
    var that = this;
-    app.getPageData("User/index",function(data){
-                that.setData(data);
-                wx.setStorage({
-                  key:"user_info",
-                  data:data.user_info
-                });
-               that.setData({'user_info':data.user_info});  
-               wx.stopPullDownRefresh();
-        });
   },
   onLoad: function () {
     var that = this;

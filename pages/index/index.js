@@ -6,15 +6,16 @@ Page({
   data: {
     orderListActive:0,
     showType:2,
+    tabId:1,
     showOrder:2,
+    window:{},
     userInfo: {},
     markers: [
     ],
     listData:[{
       userId:1,
       id: 1,
-      picUrl:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511355048549&di=dd05b1accb0d52b5b53c0182b81e4c45&imgtype=0&src=http%3A%2F%2Fimg.xsee.cc%2Fupload%2Falbum%2F2016%2F04%2F19%2Fab8a78a4-6613-4151-9586-2d7892965b31-1200x803.jpg',
-      content: app.cutString('一起吃饭的形式应该会有很多人会喜欢，尤其对于驴友来说，到旅行目的地还能融入当地人的生活，是一种很酷的体验。',40),
+      content: app.util.cutString('一起吃饭的形式应该会有很多人会喜欢，尤其对于驴友来说，到旅行目的地还能融入当地人的生活，是一种很酷的体验。',40),
       user:{avatarUrl:'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3345436832,2975398698&fm=27&gp=0.jpg',
         nickName:'winn'
       },
@@ -22,8 +23,7 @@ Page({
     }, {
       userId: 1,
       id:2,
-      picUrl:'http://youimg1.c-ctrip.com/target/tg/363/601/850/8c54f24277e14a6eb41560bd8f69bf19_metal.jpg',
-      content: app.cutString('我在厦门，典型的旅游城市。而我作为一个外地人，来厦两年多，自然也被厦门文艺的气质感染了（文青都想开一个咖啡馆书店私房菜馆什么的），因为我喜欢做饭，且手艺也不算差，就想通过“吃”的方式结交一帮朋友，而且这种方式应该与众不同才对。',40),
+      content: app.util.cutString('我在厦门，典型的旅游城市。而我作为一个外地人，来厦两年多，自然也被厦门文艺的气质感染了（文青都想开一个咖啡馆书店私房菜馆什么的），因为我喜欢做饭，且手艺也不算差，就想通过“吃”的方式结交一帮朋友，而且这种方式应该与众不同才对。',40),
       user: {
         avatarUrl: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3345436832,2975398698&fm=27&gp=0.jpg',
         nickName: '只吃饭不洗碗'
@@ -32,14 +32,58 @@ Page({
       }, {
         userId: 1,
         id: 1,
-        picUrl: 'https://p1.meituan.net/deal/0078ff80f24520badc03a5f194c659f730143.jpg%40450w_280h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20',
-        content: app.cutString('尤其对于驴友来说，到旅行目的地还能融入当地人的生活，是一种很酷的体验。',40),
+        content: app.util.cutString('尤其对于驴友来说，到旅行目的地还能融入当地人的生活，是一种很酷的体验。',40),
         user: {
           avatarUrl: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3345436832,2975398698&fm=27&gp=0.jpg',
           nickName: 'winn'
         },
         timeTran: '2分钟前'
-      }]
+      }],
+    listData1: [{
+      userId: 1,
+      id: 1,
+      picUrl: 'https://res.cloudinary.com/eatwith/image/upload/c_fill,f_auto,fl_progressive,h_250,q_auto,w_340/v1/user_48538/vtkzr7t7aeaeioijsqkb.jpg',
+      title:'这样的饭局在哪里吃',
+      content: app.util.cutString('比如在公园的露天野餐区、在湖边、在山顶等，总之都是根据发起者也就是当地人组织者的计划来制定。', 40),
+      user: {
+        avatarUrl: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3345436832,2975398698&fm=27&gp=0.jpg',
+        nickName: 'winn'
+      },
+      timeTran: '2分钟前'
+    }, {
+      userId: 1,
+      id: 2,
+      title: '这样的饭局在哪里吃',
+      picUrl: 'http://youimg1.c-ctrip.com/target/tg/363/601/850/8c54f24277e14a6eb41560bd8f69bf19_metal.jpg',
+      content: app.util.cutString('目前，发起这种饭局的都是生活在各个目的地的当地人，他们未必是专业的厨师，但都是美食烹饪爱好者，擅长于烹制本地特色的食物，还很喜欢结交世界各地的朋友。。', 40),
+      user: {
+        avatarUrl: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3345436832,2975398698&fm=27&gp=0.jpg',
+        nickName: '只吃饭不洗碗'
+      },
+      timeTran: '2分钟前'
+    }, {
+      userId: 1,
+      id: 1,
+      title: '如何参加饭局',
+      picUrl: 'https://res.cloudinary.com/eatwith/image/upload/c_fill,f_auto,fl_progressive,h_250,q_auto,w_340/v1/host_9103/rjktjeufqelcblw8k48r.jpg',
+      content: app.util.cutString('一般发起人会创建一个“饭局”，写明包括吃饭的时间、地点、约定人数、费用、菜单信息等，而大多数饭局都是欢迎陌生人参与的，只要内容吸引、时间合适，就可以报名参加', 40),
+      user: {
+        avatarUrl: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3345436832,2975398698&fm=27&gp=0.jpg',
+        nickName: 'winn'
+      },
+      timeTran: '2分钟前'
+    }, {
+      userId: 1,
+      id: 1,
+      title: '安全问题如何确保',
+      picUrl: 'https://res.cloudinary.com/eatwith/image/upload/c_fill,f_auto,fl_progressive,h_250,q_auto,w_340/v1/user_047600/image_16_1412583117.jpg',
+      content: app.util.cutString('参与人与发起人必须是通过芝麻信用认证且600以上 ， 建立在互信的基础上。会派出专人提前上门审查相应的饭局提供者的资质，通过试菜等方式来进行考察', 40),
+      user: {
+        avatarUrl: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3345436832,2975398698&fm=27&gp=0.jpg',
+        nickName: 'winn'
+      },
+      timeTran: '2分钟前'
+    }]
   },
   tapOrder(e){
     this.data.orderListActive == 1 ? this.setData({ orderListActive: 0 }) : this.setData({ orderListActive: 1 });
@@ -93,6 +137,7 @@ Page({
   //   var that = this;
   //   console.log(this.data);
   // },
+
   onLoad:function(e){
     var that = this;
     app.getLocation(function (res) {
@@ -103,7 +148,12 @@ Page({
         });
         that.addMarkers();
     });
-    
+    this.setData({ window: app.globalData.window})
+    console.log(app.globalData.window);
+  },
+  indexTab:function(e){
+    var id = e.currentTarget.dataset.id;
+    this.setData({ tabId: id });
   },
   translateMarker: function () {
     console.log(this.data);
@@ -143,6 +193,11 @@ Page({
       markers: this.data.markers
     });
   },
- 
+  swiperChange:function(e){
+    this.setData({ tabId: e.detail.current });
+  },
+ scrolltolower:function(e){
+    console.log(e);
+ }
   
 })

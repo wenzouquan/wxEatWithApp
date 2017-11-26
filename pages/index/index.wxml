@@ -10,7 +10,7 @@
 
     <cover-view class="bottom">
       <cover-view class="bottom-count pull-left">共1045位饭友正在附近觅食 </cover-view>
-      <cover-view bindtap="jumpIssue" class="bottom-btn pull-left">找人吃饭</cover-view>
+      <cover-view bindtap="jumpIssue" class="bottom-btn pull-left">找人拼单</cover-view>
     </cover-view>
     <!-- <cover-view class="bottom-left" bindtap="translateMarker"> <cover-image src='../../image/03.jpeg' alt="回到中心"></cover-image></cover-view> -->
   </map>
@@ -39,12 +39,29 @@
     <view data-key="3" bindtap="changeOrder" class="orderList-li order-ico-3 {{showOrder==3?'active':''}}">时间倒序</view>
     <view data-key="4" bindtap="changeOrder" class="orderList-li order-ico-4 {{showOrder==4?'active':''}}">评论最多</view>
   </view>
-
-  <view style='height: 100rpx'></view>
-  <view class="list-content">
-    <import src="/pages/include/timeline.wxml" />
-    <template is="timeline" data="{{listData: listData}}" />
+  
+  <view class="tab indexTab">
+   <view data-id="0"  bindtap='indexTab' class="tabli {{tabId==0?'on':''}}">找人拼单</view>
+   <view  data-id="1"  bindtap='indexTab' class="tabli {{tabId==1?'on':''}}">当地饭局</view>
+   <view class="clear"></view>
   </view>
+
+  <swiper class="swiperIndex" style='height: 100%;' current="{{tabId}}" bindchange="swiperChange">
+    <swiper-item>
+       <view class="list-content">
+    <import src="/pages/include/timeline.wxml" />
+    <template is="timeline" data="{{listData: listData,windowHeight:window.windowHeight}}" />
+  </view>
+    </swiper-item>
+      <swiper-item>
+       <view class="list-content">
+    <import src="/pages/include/timelineBak.wxml" />
+    <template is="timelineBak" data="{{listData: listData1,windowHeight:window.windowHeight}}" />
+  </view>
+    </swiper-item>
+</swiper>
+
+ 
   <view class="list-bottom">
     <view bindtap="jumpIssue" class="list-bottom-btn pull-right">找人拼单</view>
     <view class="list-bottom-count pull-right">共1045位饭友正在附近拼单 </view>

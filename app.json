@@ -1,13 +1,13 @@
 
 {
-  "pages":[
-    "pages/user/chat",
-    "pages/user/profile",
+  "pages":[  
     "pages/index/index",
-    "pages/user/index",
-    "pages/shop/index",
     "pages/topic/detail",
     "pages/shop/selectShop",
+    "pages/user/chat",
+    "pages/user/profile",
+    "pages/user/index",
+    "pages/shop/index",
     "pages/index/selectCity",
     "pages/index/issue",
     "pages/user/info",

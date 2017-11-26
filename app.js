@@ -1,4 +1,5 @@
 //app.js
+var util = require('/util/util.js');
 App({
   data:{
     'apiHost':'http://www.eatwith.me/',
@@ -6,18 +7,7 @@ App({
     socketMsgQueue:[],
     socketRevQueue:{}
   },
-  onLaunch: function () {
-    //调用API从本地缓存中获取数据
-    // var logs = wx.getStorageSync('logs') || []
-    // logs.unshift(Date.now())
-    // wx.setStorageSync('logs', logs);
-    // console.log("app onLaunch");
-    this.window();
-    this.getUserInfo(function(userInfo){
-      wx.setStorageSync("user_info", userInfo);
-    });
-   
-  },
+  util: util,
   window:function(){
      console.log("window");
      var _this=this;
@@ -182,21 +172,12 @@ App({
      this.connectSocket();
      //console.log(options);
     // Do something initial when launch.
+     this.window();
+     this.getUserInfo(function (userInfo) {
+       wx.setStorageSync("user_info", userInfo);
+     });
   },
-   /**参数说明：
-    * 根据长度截取先使用字符串，超长部分追加…
-    * str 对象字符串
-    * len 目标字节长度
-    * 返回值： 处理结果字符串
-    */
-   cutString: function (str, len) {
-     //length属性读出来的汉字长度为1
-     if (str.length <= len) {
-       return str;
-     }
-     var s = str.substring(0, len) + "...";
-     return s;
-   },
+
    sendSocketMessage:function(data){
      var data = JSON.stringify(data);
      if (this.data.socketOpen === false) {
