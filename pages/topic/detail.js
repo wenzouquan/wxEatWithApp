@@ -38,6 +38,23 @@ Page({
     //     }      
     // });
   },
+  onShareAppMessage: function (res) {
+    console.log(res);
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '自定义转发标题',
+      path: '/pages/topic/detail',
+      success: function (res) {
+        // 转发成功
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
+  },
 //回答
   reply:function(){
     this.setData({'popup':1});
@@ -138,5 +155,56 @@ Page({
       urls: this.data.data.imageList
     })
   },
+  //报名
+  apply:function(){
+    wx.showShareMenu({
+      withShareTicket: true
+    });
+    var that = this;
+     this.setData({
+       applyLoading:1,
+       applyDisabled:1
+     });
+     wx.showModal({
+       title: '确认报名',
+       content: '你选择的与winn在2018.11.23 16:30 一起吃饭',
+       success: function (res) {
+         if (res.confirm) {
+           that.doApply();
+           console.log('用户点击确定')
+         } else if (res.cancel) {
+           that.cancelApply();
+           console.log('用户点击取消')
+         }
+       }
+     })
+  },
+  //取消操作 
+  cancelApply:function(){
+    this.setData({
+      applyLoading: 0,
+      applyDisabled: 0
+    });
+  },
+  //确认
+  doApply:function(){
+    this.cancelApply();
+    wx.showModal({
+      title: '恭喜您，报名成功',
+      content: ' 当前活动还需要5个人参与才能开始，是否邀请你的朋友一起去吃？',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定');
+          wx.showShareMenu({
+            withShareTicket: true
+          })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  }
 
+
+  
 })

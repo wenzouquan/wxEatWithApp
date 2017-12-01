@@ -1,41 +1,69 @@
 <page>
-  <view class="container">
-    <view class="banner-class">
-
-      <view class="l-promo-block-v1-content">
-
-        <view class="class_img text-center">
-          <image class="_ico" src="{{user_info.avatarUrl}}" alt="" />
-          <view class="mgt10">
-            <text>{{user_info.nickName}}</text>
-          </view>
+  <view class="container containerProfile">
+  <view class="userInfo">
+        <image class="userInfoImage" src="{{user_info.avatarUrl}}" alt="" />
+        <view class="userInfoText">
+         <view class="userInfoTitle"> <text>{{user_info.nickName}}</text></view>
+          <view> <text class="light">刚刚来过</text></view>
         </view>
-      </view>
+        <view class="clear"></view>
+        <view class="line mgt10"></view>
+        <view class="userInfoRemark">今天就是情人节啦，小伙伴们是不是给你心爱的TA 买玫瑰花了捏？漂亮的花需要漂亮的花瓶，看看下面这个怎么样</view>
+        <!-- <view class="userInfoBnt mgt10">
+           <view class="bnt msg">私信</view>  
+          <view class="bnt follow">+关注</view>
+           <view class="clear"></view>
+        </view> -->
+  </view>
+
+ <view class="userzmxy">
+   <image src='/image/ico13.jpeg'></image> 芝麻信用分 良好
+ </view>
+
+  <view class="userzmxy disable none">
+   <image src='/image/ico14.png'></image> 查看芝麻信用分
+ </view>
+
+ <view class="user-count">
+  <view class="title">他的参与</view>
+  <view class="ul">
+    <view class="li">
+     <view class="num">1</view>
+     <view class="text light">参与的</view>
+    </view>
+      <view class="li">
+     <view class="num">21</view>
+     <view class="text light">关注的</view>
+    </view>
+     <view class="li lilast">
+        <view class="num">1</view>
+       <view class="text light">发起的</view>
+    </view>
+    <view class="clear"></view>
+  </view>
+  <view class="line mgt10"></view>
+   <view class="user-comment comments">
+     <include src="/pages/include/comment.wxml" />
+   </view>  
+ </view>
+ 
+   <view class="bottom-fixed">
+    <view class="bottom-bnt w50 bgw">
+       <view class="bottom-bnt-small">
+         <image src="/image/ico16.png"></image>
+        <text style='color:#1296db'>关注</text>
+       </view>
+       <view class="bottom-bnt-small">
+         <image src="/image/ico15.png"></image>
+        <text>举报</text>
+       </view>
     </view>
 
-    <view class="list-li">
-      <view class="ul">
-        <navigator url="timeline" class="li mgt10">
-          <image src="/image/ico36.png" alt="" />
-          <text>他参与的</text>
-          <text class="to-right-text">20</text>
-          <image class="to-right" src="/image/arrowright.png" alt="" />
-        </navigator>
-        <navigator url="timeline" class="li">
-          <image src="/image/04.jpg"  alt="" />
-          <text>他关注的餐厅</text>
-          <text class="to-right-text">80</text>
-          <image class="to-right" src="/image/arrowright.png" alt="" />
-        </navigator>
-      </view>
-    </view>
-
-  
-
-  <view class="bottom-fixed">
-      <navigator url='/pages/user/chat' class="bottom-bnt w100">
-          <image src='/image/ico12.png'></image><text class="">聊TA</text>
+    <navigator url='/pages/user/chat' class="bottom-bnt w50">
+          <image src='/image/chat.png'></image><text class="">私信</text>
        </navigator>
-    </view>
+  </view>
+
+
   </view>
 </page>

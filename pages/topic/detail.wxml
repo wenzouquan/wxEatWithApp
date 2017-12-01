@@ -19,10 +19,18 @@
     <!--正文-->
     <view class="topic_content pd10 bgw">
       {{data.content}}
+      <scroll-view scroll-x class="imgList">
+        <image bindtap="previewImage" mode="aspectFill" src="/image/user-bg.jpg" />
+        <image bindtap="previewImage" mode="aspectFill" src="/image/user-bg.jpg" />
+        <image bindtap="previewImage" mode="aspectFill" src="/image/user-bg.jpg" />
+        <image bindtap="previewImage" mode="aspectFill" src="/image/user-bg.jpg" />
+        <image bindtap="previewImage" mode="aspectFill" src="/image/user-bg.jpg" />
+      </scroll-view>
       <block wx:for="{{data.imgList}}" wx:for-index="idx" wx:for-item="image">
         <image bindtap="previewImage" src="{{image}}" />
       </block>
     </view>
+
     <text class="light  p pd10">报名限制及人均消费</text>
     <view class="pd10 bgw">
       <view class="pull-left">男女均可</view>
@@ -86,7 +94,9 @@
      </view>
            <view class='clear'></view>
      </view> -->
+    <view class="comments">
     <include src="../include/comment.wxml" />
+    </view> 
     <!--//回复按键-->
 
   </view>
@@ -103,13 +113,13 @@
         <text>讨论</text>
        </view>
     </view>
-    <view class="bottom-bnt w50">报名</view>
+    <button  bindtap='apply'  loading="{{applyLoading}}" disabled="{{applyDisabled}}"   class="bottom-bnt w50 bgb">报名</button>
   </view>
   <!--弹出层-->
   <view class="popup {{popup==1?'modal-in':'none'}}">
     <form bindsubmit="formSubmit">
       <view class="reply">
-        <textarea name="content" value="{{reply.value}}" auto-height placeholder="{{reply.placeholder}}" />
+        <textarea name="content" fixed="true" value="{{reply.value}}" auto-height placeholder="{{reply.placeholder}}" />
         <view class="reply-button">
           <button type="default" size="mini" bindtap="btn_cancel"> 取消 </button>
 

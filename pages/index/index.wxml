@@ -5,7 +5,7 @@
     </cover-view>
 
     <cover-view class="header header-right" bindtap="changeViwe">
-      <cover-image src="/image/list.jpeg" alt="列表"></cover-image>
+      <cover-image src="/image/list.png" alt="列表"></cover-image>
     </cover-view>
 
     <cover-view class="bottom">
@@ -23,27 +23,30 @@
     </view>
 
      <navigator url="/pages/index/selectCity"  class="header header-center">上海 [切换城市]</navigator>
-    <view class="header header-right-2" catchtap="tapOrder">
-      <image src="/image/{{orderListActive==1?'ico32':'ico31'}}.png" alt="排序"></image>
-    </view>
+ 
 
     <view class="header header-right" bindtap="changeViwe">
       <image src='/image/05.jpg' alt="列表"></image>
     </view>
   </view>
-  <!-- 排序 -->
+
+  
+  <view class="tab indexTab">
+   <view data-id="0"  bindtap='indexTab' class="tabli {{tabId==0?'on':''}}"><text>找人拼单</text></view>
+   <view  data-id="1"  bindtap='indexTab' class="tabli {{tabId==1?'on':''}}"><text>东道主</text></view>
+     <view class="header-right-2" catchtap="tapOrder">
+      <image src="/image/{{orderListActive==1?'ico32':'ico31'}}.png" alt="排序"></image>
+    </view>
+   <view class="clear"></view>
+  </view>
+
+    <!-- 排序 -->
   <view class="orderList {{orderListActive==1?'':'none'}}">
     <view class="orderListTitle">排序</view>
     <view data-key="1" bindtap="changeOrder" class="orderList-li order-ico-1 {{showOrder==1?'active':''}}">点赞最多</view>
     <view data-key="2" bindtap="changeOrder" class="orderList-li order-ico-2 {{showOrder==2?'active':''}}">时间正序</view>
     <view data-key="3" bindtap="changeOrder" class="orderList-li order-ico-3 {{showOrder==3?'active':''}}">时间倒序</view>
     <view data-key="4" bindtap="changeOrder" class="orderList-li order-ico-4 {{showOrder==4?'active':''}}">评论最多</view>
-  </view>
-  
-  <view class="tab indexTab">
-   <view data-id="0"  bindtap='indexTab' class="tabli {{tabId==0?'on':''}}">找人拼单</view>
-   <view  data-id="1"  bindtap='indexTab' class="tabli {{tabId==1?'on':''}}">当地饭局</view>
-   <view class="clear"></view>
   </view>
 
   <swiper class="swiperIndex" style='height: 100%;' current="{{tabId}}" bindchange="swiperChange">
@@ -62,8 +65,14 @@
 </swiper>
 
  
-  <view class="list-bottom">
-    <view bindtap="jumpIssue" class="list-bottom-btn pull-right">找人拼单</view>
+  <view class="list-bottom {{tabId==0?'':'none'}}">
+    <view data-id="1" bindtap="jumpIssue" class="list-bottom-btn pull-right">找人拼单</view>
     <view class="list-bottom-count pull-right">共1045位饭友正在附近拼单 </view>
   </view>
+
+  <view class="list-bottom {{tabId==1?'':'none'}}">
+    <view data-id="2" bindtap="jumpIssue" class="list-bottom-btn pull-right">成为东道主</view>
+    <view class="list-bottom-count pull-right">附近有1020位热情的东道主愿意招待您</view>
+  </view>
+
 </view>

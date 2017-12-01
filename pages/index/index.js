@@ -127,9 +127,10 @@ Page({
     this.data.showType == 1 ? this.setData({ showType: 2 }) : this.setData({ showType: 1 });
   },
   //跳转到发布
-  jumpIssue:function(){
+  jumpIssue:function(e){
+    var topicType = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '../index/issue'
+      url: '../index/issue?topicType=' + topicType
     })
   },
 

@@ -8,7 +8,7 @@
 .header-center{ left: 50%; margin-left: -120rpx;}
 .header-center{ width: 220rpx; text-align: center;border:none;border-radius:0rpx;}
 .header-right{right: 20rpx;}
-.header-right-2{right: 105rpx;}
+
 .header-left{ left: 20rpx;}
 .bottom{ position: absolute;  bottom: 20rpx; right: 10rpx;  background-color:#ffffff; border-radius: 30rpx; padding: 30rpx; border:none;   }
 .bottom .bottom-count{ margin-top: 15rpx;}
@@ -32,7 +32,7 @@
   background-color: #fff;
   width: 129px;
   right: 0px;
-  top: 100rpx;
+  top: 189rpx;
   box-shadow: -1rpx 1rpx 1rpx rgba(0, 0, 0, 0.1);
   z-index: 999; border-bottom: 1px solid #eee;
 }
@@ -72,3 +72,6 @@
 }
 .indexTab{ position: fixed; z-index: 999;  top: 110rpx; left: 0;  }
 .swiperIndex{ margin-top: 188rpx;}
+.header-right-2{ position: absolute; right: 20rpx; top: 10rpx; padding: 10rpx;}
+.header-right-2 image{ width: 45rpx; height: 45rpx;display:block;line-height:1.2;
+}

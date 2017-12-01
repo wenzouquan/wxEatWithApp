@@ -1,4 +1,4 @@
-// pages/topic/detai.js
+// pages/index/zmxy.js
 Page({
 
   /**
@@ -62,5 +62,8 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  getPhoneNumber:function(e){
+    console.log(e);
   }
 })

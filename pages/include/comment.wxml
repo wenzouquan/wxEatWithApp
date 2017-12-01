@@ -18,7 +18,10 @@
                       <block wx:if="{{item.comment}}">
                        <view class="media-re-content"><navigator class="inline" url="/pages/user/profile?user_id={{item.comment.user_id}}"> {{item.comment.user.nickName}} </navigator><text>{{item.comment.content}}</text></view>
                       </block> 
-                    <view class="media-content"><text>{{item.content}}</text></view>
+                    <view class="media-content">
+                    <text>{{item.content}}</text>
+                    <view class="line mgt10"></view>
+                    </view>
             </view>
         </view>
     </block>

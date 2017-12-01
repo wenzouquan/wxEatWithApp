@@ -1,15 +1,16 @@
 
 {
-  "pages":[  
+  "pages":[ 
+    "pages/index/issue",
     "pages/index/index",
     "pages/topic/detail",
-    "pages/shop/selectShop",
-    "pages/user/chat",
+    "pages/index/zmxy",
     "pages/user/profile",
+    "pages/user/chat",
+    "pages/shop/selectShop",
     "pages/user/index",
     "pages/shop/index",
     "pages/index/selectCity",
-    "pages/index/issue",
     "pages/user/info",
     "pages/user/noti",
     "pages/user/timeline"

@@ -1,56 +1,94 @@
 <!--pages/user/chat.wxml-->
 <view class="container chatBox">
-  <view class="fromChatBox">
-    <view class="fromChatBoxLeft">
-      <image src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1629089538,987246310&fm=27&gp=0.jpg'></image>
-    </view>
-    <view class="fromChatBoxright">
-      <!-- <text> 只要搭乘上共享经济的飞船各种。在不断膨胀的共享经济星系里“新华视点”记者初步梳理发现</text> -->
-      <image class="chatimg" mode="widthFix" src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511521159413&di=f0692f16485d14d7884c88af81dcd7e8&imgtype=0&src=http%3A%2F%2Fnews.cnhubei.com%2Fxw%2Fgn%2F201711%2FW020171123766102711768.jpg'></image>
-    </view>
-    <view class="clear"></view>
-  </view>
-
-  <view class="ToChatBox">
-    <view class="ToChatBoxLeft">
-      <view class="text"> 在不断膨胀的共享经济星系里“新华视点”记者初步梳理发现
-        <image class="smile" src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1629089538,987246310&fm=27&gp=0.jpg'></image>
+<scroll-view catchtap="bodyclick" scroll-y class="msgBox {{(showChatBntBox==1 || showChatBntBox==2)?'scrollShowChat':''}}" scroll-into-view="{{toView}}">
+ <view class="msgList">
+  <block wx:for="{{msgList}}" wx:for-index="idx" wx:for-item="item">
+  <!--接收到消息  -->
+    <view wx:if="{{item.showType=='rev'}}">
+      <view class="fromChatBox" id="msg{{idx}}">
+        <view class="fromChatBoxLeft">
+          <image src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1629089538,987246310&fm=27&gp=0.jpg'></image>
+        </view>
+        <view class="fromChatBoxright">
+          <!--文本消息  -->
+           <text class="text" wx:if="{{item.msgType=='text'}}">{{item.text}}</text>
+         
+          <!--地理位置 -->
+          <view bindtap='showLocation'   data-longitude="{{item.location.longitude}}" data-latitude="{{item.location.latitude}}" class="chatLocation" wx:if="{{item.msgType=='location'}}">
+              <view class="chatLocationTitle">{{item.location.name}}</view>
+              <view class="chatLocationInfo">{{item.location.address}}</view>
+              <!-- <map    longitude="{{item.location.longitude}}" latitude="{{item.location.latitude}}" scale="14"  markers="{{item.markers}}" show-location style="width: 100%; height: 200rpx;"></map> -->
+               <image class="chatLocationImg" src='/image/address.png'></image>
+          </view>
+           <!--图片消息  -->
+          <image  bindtap='previewImage' data-src="{{item.imageUrl}}" wx:if="{{item.msgType=='image'}}" class="chatimg" mode="widthFix" src='{{item.imageUrl}}'></image>
+           <!--语音消息  -->
+           <view bindtap='playVoice'  style='width:{{(item.duration/60)*100}}%' data-voiceurl="{{item.voiceUrl}}" class="chatVoice" wx:if="{{item.msgType=='voice'}}">
+             <image src='/image/voice-1.png'></image>
+             <text>{{item.duration}}''</text>
+          </view>
+        </view>
+        <view class="clear"></view>
       </view>
-      <!-- <image  class="chatimg" mode="widthFix" src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511521159413&di=f0692f16485d14d7884c88af81dcd7e8&imgtype=0&src=http%3A%2F%2Fnews.cnhubei.com%2Fxw%2Fgn%2F201711%2FW020171123766102711768.jpg'></image>  -->
     </view>
-    <view class="ToChatBoxright">
-      <image src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1629089538,987246310&fm=27&gp=0.jpg'></image>
+     <!--发出的到消息  -->
+    <view wx:else>
+      <view class="ToChatBox" id="msg{{idx}}">
+        <view class="ToChatBoxLeft">
+         <!--文本消息  -->
+          <view class="text" wx:if="{{item.msgType=='text'}}">{{item.text}}</view>
+          <!--图片消息  -->
+          <image bindtap='previewImage' data-src="{{item.imageUrl}}" wx:if="{{item.msgType=='image'}}" class="chatimg" mode="widthFix" src='{{item.imageUrl}}'></image>
+           <!--地理位置 -->
+          <view bindtap='showLocation'   data-longitude="{{item.location.longitude}}" data-latitude="{{item.location.latitude}}" class="chatLocation" wx:if="{{item.msgType=='location'}}">
+              <view class="chatLocationTitle">{{item.location.name}}</view>
+              <view class="chatLocationInfo">{{item.location.address}}</view>
+              <image class="chatLocationImg" src='/image/address.png'></image>
+              <!-- <map    longitude="{{item.location.longitude}}" latitude="{{item.location.latitude}}" scale="14"  markers="{{item.markers}}" show-location style="width: 100%; height: 200rpx;"></map> -->
+          </view>
+          <!--语音消息  -->
+           <view  bindtap='playVoice' style='width:{{(item.duration/60)*100}}%'  data-voiceurl="{{item.voiceUrl}}" class="chatVoice" wx:if="{{item.msgType=='voice'}}">
+             <image src='/image/voice-2.png'></image>
+              <text>{{item.duration}}''</text>
+          </view>
+        </view>
+        <view class="ToChatBoxright">
+          <image src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1629089538,987246310&fm=27&gp=0.jpg'></image>
+        </view>
+        <view class="clear"></view>
+      </view>
     </view>
-    <view class="clear"></view>
+  </block>
+  <view id="msgBoxBottom"></view>
   </view>
+</scroll-view>
   <view class="chatBnt">
-    <view class="chatBntVoice" data-id="3"  bindtap='showBntAct'>
-      <image src='/image/voice.png'></image>
+    <view class="chatBntVoice" data-id="3" bindtap='showBntAct'>
+      <image src="/image/{{showChatBntBox==3?'keyboard':'voice'}}.png"></image>
     </view>
     <view class="chatBntInput">
-       <view bindtouchend='stopRecord'  bindtouchstart='startRecord' class="chatBntRecord {{showChatBntBox==3?'':'none'}}">{{chatBntRecordText}}</view>
-       <input class="{{showChatBntBox==3?'none':''}}"  bindfocus="inputFocus"></input>
-
+      <view bindtouchend='stopRecord' bindtouchmove="recordTouchmove" bindtouchcancel="cancelRecord" bindtouchstart='startRecord' class="chatBntRecord {{recording==1?'hover':''}} {{showChatBntBox==3?'':'none'}}">{{chatBntRecordText}}</view>
+      <input confirm-type="send" confirm-hold value="{{msgValue}}" bindconfirm="confirmSend" class="{{showChatBntBox==3?'none':''}}" bindfocus="inputFocus"></input>
     </view>
-    <view class="chatBntSmile" data-id="2" bindtap='showBntAct'>
+    <!-- <view class="chatBntSmile" data-id="2" bindtap='showBntAct'>
       <image src='/image/emoji.png'></image>
-    </view>
+    </view> -->
     <view class="chatBntAct" data-id="1" bindtap='showBntAct'>
       <image src='/image/addition.png'></image>
     </view>
     <view class="chatBntBox {{(showChatBntBox==1 || showChatBntBox==2)?'':'none'}}">
       <view class="ActImages {{showChatBntBox==1?'':'none'}}">
-        <view class="ActImagesOne">
+        <view class="ActImagesOne" data-source="album" bindtap='chooseImage'>
           <image src='/image/10.png'></image>
           <text>照片</text>
           <view class="clear"></view>
         </view>
-        <view class="ActImagesOne">
+        <view class="ActImagesOne" data-source="camera" bindtap='chooseImage'>
           <image src='/image/09.png'></image>
           <text>拍照</text>
           <view class="clear"></view>
         </view>
-        <view class="ActImagesOne">
+        <view class="ActImagesOne" bindtap='chooseLocation'>
           <image src='/image/11.png'></image>
           <text>位置</text>
           <view class="clear"></view>
@@ -59,7 +97,6 @@
       <scroll-view class="simleList {{showChatBntBox==2?'':'none'}}">
         <image src='/image/emoji.png'></image>
         <image src='/image/emoji.png'></image>
-         
       </scroll-view>
     </view>
   </view>

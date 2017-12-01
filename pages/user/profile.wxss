@@ -1,1 +1,24 @@
 /* pages/user/profile.wxss */
+.userInfo{ background-color: #fff; padding: 20rpx; margin: 20rpx;}
+.userInfoImage{ float: left; border: 1px solid #eee;  width:100rpx; height: 100rpx; border-radius: 50%; }
+.userInfoTitle{ font-size: 30rpx; font-weight: bold;}
+.userInfoText{ margin-left: 20rpx; float: left; margin-top: 15rpx;}
+.userInfoRemark{ margin-top: 20rpx;}
+.userInfoBnt{ position: relative}
+.userInfoBnt .bnt{  height: 50rpx; line-height: 50rpx; border: 1px solid #5AC904 ; text-align: center; display: block; padding: 0rpx 30rpx; color:#5AC904;  float: right; }
+.userInfoBnt .msg{ margin-left: 30rpx;}
+.userzmxy{ color:#40c9b3;padding: 20rpx; margin: 20rpx;background-color: #fff; text-align: center;  }
+.userzmxy image{ width: 30rpx; height: 30rpx; vertical-align:-5rpx;}
+.disable{ color: #8a8a8a}
+
+.user-count{ background: #fff;}
+.user-count .ul .li{ float: left; width: 33%; text-align: center; border-right:1px solid #eee; padding: 15rpx 0rpx; box-sizing: border-box }
+.user-count .ul .li:last-child{border-right:none}
+.user-count .title{ font-size: 30rpx; padding: 20rpx;}
+.user-count .ul .li .num{ font-size: 40rpx;}
+.user-count .ul .lilast{ border: none ; }
+/* .lilast image{ width: 25rpx; height: 25rpx; margin-left: 8rpx; vertical-align: -3rpx;}
+.lilast text{ font-size: 27rpx; margin-left: 8rpx;} */
+.containerProfile{ padding-bottom: 120rpx;}
+.user-comment{ padding-top: 20rpx;}
+.user-comment .media{ margin-bottom: 0rpx; padding-top: 0rpx;}

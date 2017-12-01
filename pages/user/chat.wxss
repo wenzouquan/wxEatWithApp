@@ -1,5 +1,5 @@
 /* pages/user/chat.wxss */
-.chatBox{ box-sizing: border-box; padding: 10rpx;}
+.chatBox{ height: 100%; box-sizing: border-box; padding: 10rpx; }
 .fromChatBox,.ToChatBox{ margin-top: 40rpx; position: relative; }
 .fromChatBoxLeft{ width: 80rpx; float: left;position: absolute;}
 .fromChatBoxLeft image,.ToChatBoxright image{ width: 80rpx; height: 80rpx; }
@@ -9,18 +9,36 @@
 .ToChatBoxright{ width: 80rpx; float: right;position: absolute; top: 0; right: 0;}
 .ToChatBoxLeft{  padding-left: 12%; box-sizing: border-box; padding-right: 100rpx;}
 .ToChatBoxLeft text{ float: right}
-.chatimg{ max-width: 100%;}
+.chatimg{ max-width: 100%; height: auto; width: auto; min-width: 100rpx;}
 .chatBox .smile{ width: 30rpx; height: 30rpx; vertical-align:-4rpx; margin: 0 2rpx;}
-.chatBnt{ bottom: 0; width: 100%;  position: fixed; left: 0; min-height: 90rpx; border-top:1px solid #eee;}
-.chatBntInput{ position: absolute;   width: 100%; padding-left: 70rpx; padding-right:170rpx; box-sizing: border-box ;z-index: 0 }
-.chatBntVoice{ position: absolute; top: 20rpx; z-index: 2}
+.chatBnt{ bottom: 0; width: 100%;  position: fixed; left: 0; min-height: 90rpx; border-top:1px solid #eee; background: #fff; }
+.chatBntInput{ position: absolute;   width: 100%; padding-left: 80rpx; padding-right:100rpx; box-sizing: border-box ;z-index: 0 }
+.chatBntVoice{ position: absolute; top: 20rpx; z-index: 2; left: 20rpx;}
 .chatBntSmile{ position: absolute; top: 20rpx; right: 100rpx;z-index: 2}
-.chatBntAct{ position: absolute; top: 20rpx; right: 35rpx;}
+.chatBntAct{ position: absolute; top: 20rpx; right: 20rpx;}
 .chatBntVoice image,.chatBntAct image,.chatBntSmile image{ width: 55rpx; height: 55rpx; }
-.chatBntInput input{ width: 100%; height: 70rpx; border-bottom: 1px solid #eee; border-radius: 10rpx;}
+.chatBntInput input{ width: 100%; height: 60rpx; border-bottom: 1px solid #eee; border-radius: 10rpx;  box-sizing: border-box; margin-top: 20rpx;}
 .chatBntBox{ width: 100%; height: 300rpx; border-top:1px solid #eee; margin-top: 90rpx; }
 .ActImages image{ width: 50rpx; height: 50rpx; display: block; padding: 20rpx; border: 1px solid #eee; border-radius:15rpx; margin: 0 auto }
 .ActImages text{ width: 100%; display: block; text-align: center; margin-top: 5rpx;}
 .ActImagesOne{ float: left; margin-top: 40rpx; margin-left: 20rpx;width: 100rpx; height: 100rpx; color: #555; }
 .simleList image{ width: 55rpx; height: 55rpx;}
-.chatBntRecord{ text-align: center; line-height: 90rpx;}
+.chatBntRecord{ text-align: center;  height: 60rpx; line-height: 60rpx; border-radius: 20rpx; margin-top: 15rpx;}
+.chatBntRecord.hover{ background: #fbf9fe}
+.chatVoice{ background: greenyellow; height: 80rpx; border-radius: 10rpx; position: relative; min-width: 20%;}
+.chatVoice image{ width: 40rpx; height: 40rpx; position: absolute;  top: 25rpx;}
+.ToChatBox .chatVoice{float: right;}
+.ToChatBox .chatVoice image{right: 10rpx;}
+.msgBox{ height: 100%; box-sizing: border-box; }
+.ToChatBox .chatVoice text{ position: absolute; left: -50rpx; top: 40rpx; color: #999;}
+.fromChatBox .chatVoice text{ position: absolute; right: -50rpx; top: 40rpx; color: #999; font-size: 25rpx}
+.chatLocation{ background: #fff;border-radius: 10rpx; border: 1px solid #ccc; position: relative ; box-sizing: border-box; padding-right: 80rpx;}
+.chatLocationTitle{ font-size: 30rpx; font-weight: bold; padding: 10rpx;}
+.chatLocationInfo{ font-size: 25rpx; color: #999;padding:  10rpx; padding-top: 0rpx;}
+.chatLocation map{box-sizing: border-box; border-top: 1px solid #ccc; }
+.scrollShowChat{margin-top : -320rpx;}
+.ToChatBoxLeft .text{ float: right;background:greenyellow;}
+.chatLocationImg{ width: 45rpx; height: 45rpx; position: absolute;right: 20rpx;top: 25rpx;}
+.msgList{ padding-bottom: 120rpx;}
+.ToChatBoxLeft .chatimg{ float: right;}
+#msgBoxBottom{ height: 1rpx;}

@@ -60,7 +60,7 @@ page {
 .inline{ display: inline}
 .pull-left{ float: left}
 
-.media{  padding: 20rpx 0rpx ; background-color: #fff; }
+.media{  padding: 20rpx 0rpx ; background-color: #fff; margin-bottom: 20rpx;}
 
 .media .avatar{ width: 70rpx; margin-left: 10rpx;}
 .media .avatar image{ width: 70rpx; height: 70rpx; border-radius: 50%;}
@@ -119,7 +119,7 @@ page {
 
 
 
-.list-li .ul .li{ line-height: 60rpx; zoom: 1; height: 60rpx; width: 100%; border-bottom: 1px solid #ededed; padding: 18rpx 0; background-color: #fff;}
+.list-li .ul .li{ line-height: 60rpx; zoom: 1;  width: 100%; border-bottom: 1px solid #ededed; padding: 18rpx 0; background-color: #fff; min-height: 60rpx;}
 
 .list-li .ul .li image{width: 50rpx; height: 50rpx; margin-top: 6rpx; float: left;margin-left: 30rpx}
 .list-li .ul .li text{ display:block;float: left; margin-left: 30rpx}
@@ -136,7 +136,9 @@ page {
 .topicList .item .item_right text{ display: block}
 .topicList .item .s_left text,.topicList .item .s_left image{ float: left;}
 .topicList .item .s_left image{ margin-top: 5rpx}
-.topic_content image{ max-width: 100%;}
+.media-act image{ width: 40rpx; height: 40rpx;}
+.topic_content .imgList{white-space:nowrap;}
+.topic_content .imgList image{  margin-right: 10rpx; height: 180rpx; width: 180rpx; }
 .s_left{ float: left}
 .s_right{float: right}
 .small_ico{ width: 40rpx; height: 40rpx; border-radius: 50%;}
@@ -275,19 +277,21 @@ to { -webkit-transform: translate3d(0,100%,0);
 .column_like .ico text{ float: left; margin-top: 8rpx; margin-left: 10rpx;}
 .icon-ic_like{  border: 1rpx solid #eee; border-radius: 10rpx; padding:0 20rpx 10rpx 10rpx;  }
 
-.bottom-bnt{ float: left;  box-sizing: border-box; text-align: center; height: 100rpx; color: #fff; line-height: 100rpx;}
+.bottom-bnt{ float: left;  box-sizing: border-box; text-align: center; height: 100rpx; color: #fff; line-height: 100rpx; border-radius: 0rpx;}
+.bottom-bnt:after{ border: none}
 .w50{width: 50%;}
+.bgb{ background-color: #000;}
 .w100{ width: 100%}
 .w40{ width: 40%; background-color: #fff; color: #000}
 .w60{ width: 60%;}
 .bottom-bnt-line{ position: absolute; border-left: 1px solid #fff; height: 40rpx; left: 50%; top: 30rpx;}
 .bottom-fixed{ z-index: 999; position: fixed; width: 100%; height: 100rpx; bottom: -2rpx; background: #fff; box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1); background: #000; box-sizing: border-box;  }
-.bottom-bnt image{ width: 30rpx; height: 30rpx; vertical-align: -3rpx; margin-right: 10rpx;}
+.bottom-bnt image{ width: 30rpx; height: 30rpx; vertical-align: -8rpx; margin-right: 10rpx;}
 
-.media-new{ background: #fff; width: 100%; padding-bottom: 20rpx;padding-top: 20rpx; box-sizing: border-box; }
+.media-new{ background: #fff; width: 100%; padding-bottom: 20rpx; box-sizing: border-box; margin-bottom: 20rpx; }
 .media-new-left{ width: 25%;float: left; box-sizing: border-box; padding-right: 20rpx;}
 .media-new-right{ width: 75%; float: left;box-sizing: border-box;  }
-.media-new-right .media-cover{ width: 100%; }
+.media-cover{ width: 100%; }
 .media-new-left-text{ text-align: right; margin-top:20rpx; color: #555;  }
 .media-new-left .strong{color: #c00; font-size: 26rpx; font-weight: bold}
 .media-tag{ border: 1rpx solid #555; text-align: center; float: right; width: 80%;color: #555}
@@ -295,14 +299,16 @@ to { -webkit-transform: translate3d(0,100%,0);
 .media-new-left .avatar{ margin-left: 25rpx;}
 .media-new-left .avatar image{ width: 40rpx; height: 40rpx; border-radius: 50%;}
 .media-info{ color: #555;  line-height: 40rpx;}
-.media-part{width: 100%; margin-top: 20rpx;}
+.media-part{width: 100%; margin-top: 20rpx; position: relative}
 .media-new .ico image{ margin-top:2rpx; }
 .media-new .ico  text{ margin-left: 8rpx ; }
+.media-dis{ position: absolute ; bottom: 0rpx; left:35rpx; }
 .text-date{ background: #c00; color: #fff; width: 100%;  float: right; box-sizing: border-box; padding: 10rpx;}
 .text-date-line{ font-size: 20rpx; margin-bottom:10rpx; padding-top: 10rpx; }
 .bottom-bnt-small{ float: left; margin-left: 50rpx;}
-.bottom-bnt-small image{ display: block; width: 50rpx; height: 50rpx; margin-top: 10rpx; margin-left: 8rpx;}
-.bottom-bnt-small text{ color: #555;display: block; text-align: center; line-height: 25rpx; margin-top: 3rpx;}
+.bottom-bnt-small image{ display: block; width: 40rpx; height: 40rpx; margin-top: 10rpx; margin-left: 10rpx; margin-bottom: 10rpx;}
+.bottom-bnt-small text{ color: #888;display: block; text-align: center; line-height: 25rpx; margin-top: 3rpx;}
 .tab{ background: #fff; width: 100%;  border-bottom: 1px solid #eee; height: 80rpx; box-sizing: border-box}
 .tab .tabli{ float: left; width: 220rpx; text-align: center; line-height: 80rpx; height: 80rpx;  box-sizing: border-box;}
-.tab .tabli.on{ background: #000; color: #fff;}
+.tab .tabli.on text{border-bottom: 6rpx solid #000; display: inline-block; height: 100%; box-sizing: border-box; padding: 0rpx 40rpx;}
+.comments .media:last-child .line{ border: none}
