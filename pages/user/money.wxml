@@ -1,0 +1,73 @@
+<page class="userMoneyPage">
+  <view class="container">
+    <view class="banner-class">
+      <view class="l-promo-block-v1-content">
+        <view class="ul">
+           <navigator open-type="redirect"  url='money' class="li border-none">
+            <image src='/image/ico30.png'></image>
+            <text>总收入</text>
+            <text>¥120498</text>
+          </navigator>
+           <navigator open-type="redirect"  url='money?type=1' class="li">
+            <image src='/image/ico33.png'></image>
+            <text>未结算</text>
+            <text>¥3049</text>
+          </navigator>
+          <navigator open-type="redirect" url='money?type=3' class="li">
+            <image src='/image/ico38.png'></image>
+            <text>可提现</text>
+             <text>¥5049</text>
+          </navigator>
+        </view>
+      </view>
+    </view>
+    <view class="money-list">
+
+      <view class="money-one">
+        <view class="pull-left moneyico">
+          <image src='/image/ico27.png'></image>
+        </view>
+        <view class="moneytext">
+          <view class="title">
+           <text class="pull-left">活动报名</text>
+           <text class="pull-right green">+100</text>
+           <view class="clear"></view>
+          </view>
+          <text class="light">2017-12-30 14:30</text>
+        </view>
+      </view>
+      
+      <view class="money-one">
+        <view class="pull-left moneyico">
+          <image src='/image/ico40.png'></image>
+        </view>
+        <view class="moneytext">
+          <view class="title">
+           <text class="pull-left">提现</text>
+           <text class="pull-right">-100</text>
+           <view class="clear"></view>
+          </view>
+          <text class="light">2017-12-30 14:30</text>
+        </view>
+      </view>
+
+      <view class="money-one">
+        <view class="pull-left moneyico">
+          <image src='/image/ico41.png'></image>
+        </view>
+        <view class="moneytext">
+          <view class="title">
+           <text class="pull-left">活动报名</text>
+           <text class="pull-right light">+100</text>
+           <view class="clear"></view>
+          </view>
+          <text class="light">2017-12-30 14:30</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+    <view  wx:if="{{type==3}}" class="bottom-fixed">
+    <navigator class="bottom-bnt w100" url="withdraw">提现</navigator>
+  </view>
+</page>

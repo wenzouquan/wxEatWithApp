@@ -1,0 +1,10 @@
+/* pages/user/bank.wxss */
+.bankitem{ padding: 20rpx; background-color: #fff; position:relative }
+.bankitem.add{ padding-bottom: 40rpx;}
+.bankitem image{ position: absolute; width: 20rpx; height: 20rpx; top: 50rpx; right: 40rpx; }
+.BankBoxItem{ background: #fff; padding: 20rpx;}
+.BankBoxItemOne{ padding: 10rpx;}
+.BankBoxItem .input{ display: block; padding-left: 100rpx;}
+.buttons{ padding: 40rpx;}
+.pdpig{ padding-bottom: 20rpx; padding-top:30rpx;}
+.pdpig .line{ margin-top:30rpx;}

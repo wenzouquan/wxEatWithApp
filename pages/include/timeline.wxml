@@ -2,7 +2,7 @@
   <scroll-view enable-back-to-top data-id="timeline" scroll-y="true" bindscrolltolower="scrolltolower" lower-threshold="50" style="height:{{windowHeight?windowHeight:300}}px">
     <view class="unstyled myfeed after_div" style="border:none">
       <block wx:for="{{listData}}" wx:for-index="idx" wx:for-item="item">
-        <navigator url="/pages/topic/detail?id={{item.id}}" class="media">
+        <navigator url="/pages/topic/detail?id={{item.id}}&topic_type=1" class="media">
           <view  class="avatar pull-left">
             <image src="{{item.user.avatarUrl}}"></image>
           </view>

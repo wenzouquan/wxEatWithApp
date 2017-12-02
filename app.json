@@ -1,14 +1,19 @@
 
 {
-  "pages":[ 
-    "pages/index/issue",
+  "pages":[
+    "pages/user/money",
+    "pages/user/bank",
+    "pages/user/withdraw",
+    "pages/user/index",
     "pages/index/index",
-    "pages/topic/detail",
+    "pages/topic/detail", 
+    
+    "pages/index/issue",
     "pages/index/zmxy",
     "pages/user/profile",
     "pages/user/chat",
     "pages/shop/selectShop",
-    "pages/user/index",
+   
     "pages/shop/index",
     "pages/index/selectCity",
     "pages/user/info",

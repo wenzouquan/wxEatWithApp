@@ -30,15 +30,21 @@
 
     <view class="list-li">
       <view class="ul">
+      <navigator  url="money" class="li mgt10">
+           <image src="/image/ico27.png" alt="" />
+           <text>我的收入</text>
+           <text class="to-right-text">¥2380</text>
+          <image class="to-right" src="/image/arrowright.png" alt="" />
+          </navigator> 
         <navigator url="timeline" class="li mgt10">
-          <image src="/image/ico36.png" alt="" />
+          <image src="/image/ico21.png" alt="" />
           <text>我发布的</text>
           <text class="to-right-text">20</text>
           <image class="to-right" src="/image/arrowright.png" alt="" />
         </navigator>
 
-        <navigator url="timeline" class="li mgt10">
-          <image src="/image/ico37.png" alt="" />
+        <navigator url="timeline" class="li">
+          <image src="/image/ico22.png" alt="" />
           <text>我参与的</text>
           <text class="to-right-text">20</text>
           <image class="to-right" src="/image/arrowright.png" alt="" />
@@ -49,16 +55,12 @@
           <text>帐户设置</text>
           <image class="to-right" src="/image/arrowright.png" alt="" />
         </navigator> -->
-        <!-- <navigator  url="money" class="li mgt10">
-           <image src="../../image/54freesmallicons/piggy.png" alt="" />
-           <text>我的财务</text>
-          <image class="to-right" src="../../image/arrowright.png" alt="" />
-          </navigator> -->
+         
   <view class="list-li">
       <view class="ul">
         <navigator url="timeline" class="li mgt10">
-          <image src="/image/04.jpg"  alt="" />
-          <text>他关注的餐厅</text>
+          <image src="/image/ico2-on@2x.png"  alt="" />
+          <text>我关注的</text>
           <text class="to-right-text">80</text>
           <image class="to-right" src="/image/arrowright.png" alt="" />
         </navigator>
@@ -66,16 +68,18 @@
     </view>
         <navigator url="noti" class="li mgt10">
           <image src="/image/ico35.png" alt="" />
-          <text>消息</text>
+          <text>消息中心</text>
            <text class="to-right-text" style='color:#000'>20</text>
           <image class="to-right" src="/image/arrowright.png" alt="" />
         </navigator>
 
-        <contact-button class="li mgt10" type="default-light" size="100" session-from="weapp">
+      <button class="buttonNone" session-from="wxapp" open-type="contact" >  
+      <view class="li mgt10">
           <image src="/image/ico12.png" alt="" />
-          <text>投诉建议</text>
+          <text>联系我们</text>
           <image class="to-right" src="/image/arrowright.png" alt="" />
-        </contact-button>
+        </view>
+        </button>
 
       </view>
     </view>

@@ -1,0 +1,10 @@
+/* pages/user/money.wxss */
+.userMoneyPage .banner-class{ background: none; height: 270rpx; }
+.userMoneyPage .ul{ margin: 0;  padding-top: 40rpx;}
+.userMoneyPage .ul .li{ height: 200rpx;}
+.userMoneyPage .ul .li image{ width: 80rpx; height: 80rpx;}
+.money-one { background-color: #fff; margin-top: 10rpx; padding: 10rpx;}
+.moneytext{ padding-left: 70rpx;}
+.green{ color:#2abf4c }
+.money-one .moneyico image{ width: 50rpx; height: 50rpx; margin-top:5rpx;}
+.moneytext .title .pull-left{ font-size: 30rpx;}

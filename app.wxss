@@ -312,3 +312,9 @@ to { -webkit-transform: translate3d(0,100%,0);
 .tab .tabli{ float: left; width: 220rpx; text-align: center; line-height: 80rpx; height: 80rpx;  box-sizing: border-box;}
 .tab .tabli.on text{border-bottom: 6rpx solid #000; display: inline-block; height: 100%; box-sizing: border-box; padding: 0rpx 40rpx;}
 .comments .media:last-child .line{ border: none}
+.sharebutton{ padding: 0; margin: 0; font-size: 24rpx; border-radius: 0; background-color: inherit; border: none}
+.buttonNone{padding: 0; margin: 0; font-size: 26rpx; border-radius: 0;background-color: inherit; }
+.sharebutton{  line-height: 32rpx; }
+.buttonNone:after{border: none}
+.topicPage .pull-left{ max-width: 80%;}
+.topicPage .pull-right .smallimg{ vertical-align: -1rpx;}

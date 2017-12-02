@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.6.4",
 	"appid": "wx61ce8c6ace48a236",
-	"projectname": "拼单吃饭",
+	"projectname": "%E6%8B%BC%E5%8D%95%E5%90%83%E9%A5%AD",
 	"condition": {
 		"search": {
 			"current": -1,

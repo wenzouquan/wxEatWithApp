@@ -1,0 +1,47 @@
+<!--pages/user/withdraw.wxml-->
+<page class="userMoneyPage">
+  <view class="container" wx:if="{{showAddBank==0}}">
+  <view class="light pd10">到账银行卡</view>
+    <view class="bankitem ">
+     <view>招商银行 （4354）</view>
+      <view class="light">提现免手续费</view>
+      <view class="line mgt10"></view>
+      <image src='/image/ico49.png'></image>
+    </view>
+
+    <view class="bankitem add" data-id="1" bindtap='addBank'>
+     <view>使用新卡提现</view>
+    </view>
+  </view>
+
+  <view class="addBankBox" wx:if="{{showAddBank==1}}">
+    <view class="light pd10">请绑定挂卡本人的银行卡</view>
+    <view class="BankBoxItem">
+      <view class="BankBoxItemOne pdpig">
+       <view class="pull-left">持卡人</view>
+        <view class="input">温作权</view>
+        <view class="line mgt10"></view>
+        <view class="clear"></view>
+      </view>
+      <view class="BankBoxItemOne ">
+       <view class="pull-left mgt5">卡号</view>
+        <view class="input"><input></input></view>
+         <view class="line mgt10"></view>
+          <view class="clear"></view>
+      </view>
+      
+      <view class="BankBoxItemOne pdpig">
+       <view class="pull-left">开户行</view>
+         <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}"><view class="input">
+         <text wx:if="{{bankname==''}}" class="light">只支持向账户类型为个人的账户付款</text>
+         {{bankname}}
+        </view> </picker>
+      </view>
+       <view class="clear"></view>
+    </view>
+  <view class="buttons">
+    <button type="primary"  bindtap='doAddBank' class="mgt10">下一步</button>
+      <button type=""  data-id="0" bindtap='addBank'   class="mgt10">取消</button>
+      </view>
+  </view>
+</page>

@@ -1,0 +1,129 @@
+
+  <view class="container">
+    <!--头部-->
+    <view class="topic_head bgw">
+      <navigator url="/pages/user/profile">
+        <image class="avatar" src="{{data.user.avatarUrl}}"></image>
+      </navigator>
+      <view class="pull-left mgt5">
+        <navigator url="/pages/user/profile">
+          <text>{{data.user.nickName}}</text>
+        </navigator>
+        <text class="light">{{data.timeTran}}</text>
+      </view>
+      <!-- <view class='ico pull-right mgt5'>
+        <image src="/image/share@2x.png"></image>
+      </view> -->
+      <view class='clear'></view>
+    </view>
+    <!--正文-->
+    <view class="topic_content pd10 bgw">
+      {{data.content}}
+      <scroll-view scroll-x class="imgList">
+        <image bindtap="previewImage" mode="aspectFill" src="/image/user-bg.jpg" />
+        <image bindtap="previewImage" mode="aspectFill" src="/image/user-bg.jpg" />
+        <image bindtap="previewImage" mode="aspectFill" src="/image/user-bg.jpg" />
+        <image bindtap="previewImage" mode="aspectFill" src="/image/user-bg.jpg" />
+        <image bindtap="previewImage" mode="aspectFill" src="/image/user-bg.jpg" />
+      </scroll-view>
+      <block wx:for="{{data.imgList}}" wx:for-index="idx" wx:for-item="image">
+        <image bindtap="previewImage" src="{{image}}" />
+      </block>
+    </view>
+
+
+    <text class="light  p pd10">就餐地点</text>
+    <view data-latitude="" data-longitude="" bindtap='openLocation'  class="pd10 bgw">
+      <view class="pull-left">
+        <image src="/image/04.jpg" class="smallimg"></image>
+        <text >旧时书店（上海长泰广场89号2层）</text>
+      </view>
+      <view class="pull-right">200m
+        <image class="to-right" class="smallimg" src="/image/arrowright.png" alt="" />
+      </view>
+      <view class='clear'></view>
+    </view>
+
+      <text class="light  p pd10">拼单优惠</text>
+    <view class="pd10 bgw">
+      <view class="pull-left">
+        找朋友一拼单可享受 <text class="blue">8折</text> 优惠
+      </view>
+      <view class="pull-right">
+       <button class="buttonNone sharebutton"  open-type="share">发送给朋友
+        <image class="to-right" class="smallimg" src="/image/share@2x.png" alt="" />
+       </button>
+      </view>
+      <view class='clear'></view>
+    </view>
+
+
+    <text class="light  p pd10">就餐人数及时间</text>
+    <view class=" pd10 bgw">
+      <view class="pull-left"> 最少3人 最多5人 </view>
+      <view class="pull-right">15：30</view>
+      <view class='clear'></view>
+    </view>
+
+    <!--点赞  -->
+    <view class="light  p pd10 mgt5">
+      <!-- <text class="pull-left blue">点赞</text> -->
+      <text class="pull-left ">赞(1020)</text>
+      <view class='clear'></view>
+    </view>
+    <view class="column_like pd10 bgw">
+      <view class="pull-left images">
+        <image src='/image/01.jpeg'></image>
+        <image src='/image/user.jpeg'></image>
+        <image src='/image/inc13.png'></image>
+        <image src='/image/inc13.png'></image>
+        <view class="icon-ic_like_more">...</view>
+      </view>
+      <!-- <view class='ico pull-right'>
+         <image src="/image/ico2@2x.png"></image> 
+        <text class="blue">点赞</text>
+      </view> -->
+      <view class='clear'></view>
+    </view>
+
+
+    <!--评论-->
+
+    <view class="light  p pd10 mgt5">
+      <!-- <text class="pull-left blue" bindtap="reply">写留言</text> -->
+      <text class="pull-left ">讨论(1020)</text>
+      <view class='clear'></view>
+    </view>
+    <!-- <view class='commentBox'>
+     <view class="pull-left">
+      <image class="avatar" alt="温作权" src="/image/01.jpeg" > </image>
+     </view>
+     <view class="pull-left">
+      <text>写下你的评论</text>
+     </view>
+           <view class='clear'></view>
+     </view> -->
+    <view class="comments">
+    <include src="../include/comment.wxml" />
+    </view> 
+    <!--//回复按键-->
+
+  </view>
+
+  <view style='height:110rpx'></view>
+  <view class="bottom-fixed">
+    <view class="bottom-bnt w50 bgw">
+       <view class="bottom-bnt-small">
+         <image src="/image/ico2@2x.png"></image>
+        <text>点赞</text>
+       </view>
+       <view class="bottom-bnt-small">
+         <image src="/image/ico1@2x.png"></image>
+        <text>讨论</text>
+       </view>
+    </view>
+    <picker mode="date" data-time="15:40" value="{{date}}" start="2017-12-03" end="2018-01-01" bindchange="apply">
+    <button   loading="{{applyLoading}}" disabled="{{applyDisabled}}"   class="bottom-bnt w50 bgb">¥ <text class="red">57</text> 报名</button>
+    </picker>
+  </view>
+  

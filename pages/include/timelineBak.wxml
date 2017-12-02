@@ -3,7 +3,7 @@
     <view class="unstyled myfeed after_div" style="border:none">
       <block wx:for="{{listData}}" wx:for-index="idx" wx:for-item="item">
 
-        <navigator  hover-stop-propagation="true" url="/pages/topic/detail?id={{item.id}}" class="media-new">
+        <navigator  hover-stop-propagation="true" url="/pages/topic/detail?id={{item.id}}&topic_type=2" class="media-new">
           <!-- <view class="media-new-left">
             <view class="media-new-left-text text-date">
               <view class="text-date-line">就餐时间</view>

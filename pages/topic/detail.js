@@ -3,6 +3,7 @@ var app = getApp();
 Page({
   data: {
     logs: [],
+    topicType:2,
     listData: [{
       userId: 1,
       timeTran:'1分钟前',
@@ -28,15 +29,10 @@ Page({
     //问题详情
      var that = this;
     that.setData({id:options.topic_id});
-    //  app.getPageData("Group/topic",{id:options.topic_id},function(data){
-    //      that.setData(data);
-    // });
-    // //评论列表
-    // app.getPageData("BoxApi/Sns/comment",{topic_id:options.topic_id,'type':"eduAsk"},function(data){
-    //     if(data){
-    //       that.setData({listData:data['list']});
-    //     }      
-    // });
+    that.setData({ topicType: options.topic_type });
+    wx.showShareMenu({
+      withShareTicket: true
+    })
   },
   onShareAppMessage: function (res) {
     console.log(res);
@@ -54,6 +50,15 @@ Page({
         // 转发失败
       }
     }
+  },
+  //打开地图
+  openLocation:function(e){
+    console.log(e);
+    wx.openLocation({
+      latitude: e.currentTarget.dataset.latitude,
+      longitude: e.currentTarget.dataset.longitude,
+      scale: 28
+    })
   },
 //回答
   reply:function(){
@@ -155,8 +160,30 @@ Page({
       urls: this.data.data.imageList
     })
   },
+  apply1:function(e){
+    var that = this;
+    this.setData({
+      applyLoading: 1,
+      applyDisabled: 1
+    });
+    wx.showModal({
+      title: '确认报名',
+      content: '当前就餐时间：2017-12-01 15:50 ，确认报名？',
+      success: function (res) {
+        if (res.confirm) {
+          that.doApply();
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          that.cancelApply();
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
   //报名
-  apply:function(){
+  apply:function(e){
+    console.log(e);
+    var date = e.detail.value;
     wx.showShareMenu({
       withShareTicket: true
     });
@@ -167,7 +194,7 @@ Page({
      });
      wx.showModal({
        title: '确认报名',
-       content: '你选择的与winn在2018.11.23 16:30 一起吃饭',
+       content: '你选择时间是：' + date + ' ' + e.currentTarget.dataset.time+' ，确认报名？',
        success: function (res) {
          if (res.confirm) {
            that.doApply();

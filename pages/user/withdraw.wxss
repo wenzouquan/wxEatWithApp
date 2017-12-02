@@ -1,0 +1,10 @@
+/* pages/user/withdraw.wxss */
+.withdrawBox{ margin: 20rpx; }
+.withdrawBox-1{ background-color: #faf9fc}
+.withdrawBox-1-right{ padding-left: 160rpx;}
+.withdrawBox-2{ background-color: #fff;}
+.withdrawBox-2-input .pull-left{ font-size: 40rpx;}
+.withdrawBox-2-input{ border-bottom: 1px solid #eee; }
+.withdrawBox-3{background-color: #fff;}
+.withdrawBox-2-input input{  height:100rpx; font-size: 80rpx; box-sizing: border-box;  display: block; padding-left: 20rpx; padding-bottom: 10rpx;}
+.withdrawBox-3 text{ text-align: center; display: block}
