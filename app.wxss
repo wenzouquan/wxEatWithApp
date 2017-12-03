@@ -318,3 +318,4 @@ to { -webkit-transform: translate3d(0,100%,0);
 .buttonNone:after{border: none}
 .topicPage .pull-left{ max-width: 80%;}
 .topicPage .pull-right .smallimg{ vertical-align: -1rpx;}
+.media-new-fix{ width: 100%; max-height: 380rpx; overflow: hidden;}

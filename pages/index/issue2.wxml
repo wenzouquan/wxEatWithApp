@@ -1,7 +1,6 @@
- 
-  <view class="container">
-    <view class="bgw">
-       <scroll-view scroll-x class="uploadImg">
+<view class="container">
+  <view class="bgw">
+    <scroll-view scroll-x class="uploadImg">
       <view class="uploadItem uploadBnt {{imageList.length>0?'bgg':'block'}}" bindtap='chooseImage'>
         <view>
           <image src='/image/09.png'></image>
@@ -19,71 +18,94 @@
         </view>
       </block>
     </scroll-view>
-     <view class="tip light">
+    <view class="tip light">
       <view>请上传接待环境，菜品，能突出特色的图片</view>
     </view>
-    </view>
- 
-    <view class="list-li">
-      <view class="ul">
-        <view class="li mgt10">
-          <text class="li-input-text">说明</text>
-          <view class="li-input">
-            <textarea placeholder-class="textareaClass" auto-height placeholder="自己介绍，菜品，特色，注意事项等" maxlength="100"></textarea>
-          </view>
-        </view>
+  </view>
 
-        <view class="li" bindtap='chooseLocation'>
-          <text class="li-input-text">就餐地点</text>
-          <image class="to-right" src="../../image/arrowright.png" alt="" />
-          <view class="li-input">{{address?address:'请选择地址'}}</view>
+  <view class="list-li">
+    <view class="ul">
+      <view class="li mgt10">
+        <text class="li-input-text">说明</text>
+        <view class="li-input">
+          <textarea placeholder-class="textareaClass" auto-height placeholder="自己介绍，菜品，特色，注意事项等" maxlength="100"></textarea>
         </view>
-
-
-        <view class="li mgt10">
-          <text class="li-input-text">人数下限</text>
-          <view class="li-input">
-            <input type='number' placeholder-class="textareaClass" placeholder="要求至少多少人参与" maxlength="3"></input>
-          </view>
-        </view>
-        <view class="li">
-          <text class="li-input-text">人数上限</text>
-          <view class="li-input">
-            <input placeholder="最多能接待多少人" type='number' placeholder-class="textareaClass" maxlength="3"></input>
-          </view>
-        </view>
-
-
-        <view class="li mgt10">
-          <text class="li-input-text">时间</text>
-          <view class="li-input">
-            <picker mode="time" class="pull-left mgl10" value="{{date}}" start="00:00" end="23:59" bindchange="bindDateChange">
-              <view class="picker">17:30{{date}}</view>
-            </picker>
-          </view>
-        </view>
-
-        
-        <view class="li mgt10">
-          <text class="li-input-text">人均（¥）</text>
-          <view class="li-input">
-            <input type='digit' placeholder-class="textareaClass" placeholder="我们会收取成交额的10%佣金用于平台运营" maxlength="3"></input>
-          </view>
-        </view>
-         <view class="li mgt10">
-          <text class="li-input-text">拼单优惠</text>
-          <view class="li-input">
-            <input type='digit' placeholder-class="textareaClass" placeholder="通过微信分享找朋友一起去吃的优惠金额" maxlength="3"></input>
-          </view>
-        </view>
-
       </view>
-    </view>
-    <view class='bottom-tip'>
-      <text>芝麻信用600分以上，安全可信任</text>
-    </view>
-    <view class="bottom-fixed">
-      <navigator class="bottom-bnt w40" open-type="navigateBack" delta="1">返回</navigator>
-      <navigator class="bottom-bnt w60" bindtap="post">确认发布</navigator>
+
+      <view class="li" bindtap='chooseLocation'>
+        <text class="li-input-text">就餐地点</text>
+        <image class="to-right" src="../../image/arrowright.png" alt="" />
+        <view class="li-input">
+          <text class="light mg0" wx:if="{{address==''}}">请选择地址</text> {{address}}
+        </view>
+      </view>
+
+       <view class="li">
+        <text class="li-input-text">提前预约</text>
+        <view class="li-input">
+          <picker  bindchange="bindPickerChange" data-type="max" range="{{numbers}}">
+            <text class="light mg0" wx:if="{{advanceDateText==''}}">需要提前几天预约</text> {{advanceDateText}}
+          </picker>
+        </view>
+      </view>
+
+
+
+      <view class="li mgt10">
+        <text class="li-input-text">报名人数</text>
+        <view class="li-input li-input2">
+          <picker bindchange="bindPickerChange" data-type="min" range="{{numbers}}">
+            <!-- <input placeholder="下限" type='number' value="{{minPeople}}"  placeholder-class="textareaClass" maxlength="3"></input> -->
+            <text class="light mg0" wx:if="{{minPeople==''}}">最少人数</text> {{minPeople}}
+          </picker>
+        </view>
+        <view class="li-input-tip light">~</view>
+        <view class="li-input li-input2">
+          <picker bindchange="bindPickerChange" data-type="max" range="{{numbers}}">
+            <text class="light mg0" wx:if="{{maxPeople==''}}">最多人数</text> {{maxPeople}}
+            <!-- <input placeholder="上限" type='number' value="{{maxPeople}}"  placeholder-class="textareaClass" maxlength="3"></input> -->
+          </picker>
+        </view>
+        <view class="li-input-tip light">人</view>
+        <view class="clear"></view>
+      </view>
+
+
+      <view class="li mgt10">
+        <text class="li-input-text">就餐时间</text>
+        <view class="li-input">
+          <picker mode="time" class="pull-left" start="00:00" end="23:59" bindchange="bindDateChange">
+            <view class="picker">
+              <text class="light mg0" wx:if="{{date==''}}">请设置活动开始时间</text> {{date}}
+            </view>
+          </picker>
+        </view>
+      </view>
+
+
+      <view class="li mgt10">
+        <text class="li-input-text">费用（¥）</text>
+        <view class="li-input">
+          <input type='digit' placeholder-class="textareaClass" placeholder="客人报名需支付的费用" maxlength="3"></input>
+        </view>
+      </view>
+      <view class="li">
+        <text class="li-input-text">拼单优惠</text>
+        <view class="li-input">
+          <picker bindchange="bindDiscountsChange" range="{{discounts}}">
+            <!-- <input type='digit' placeholder-class="textareaClass" placeholder="邀请好友参加享受优惠" maxlength="3" value='{{discount}}'></input> -->
+            <text class="light mg0" wx:if="{{discountText==''}}">邀请好友参加享受优惠</text> {{discountText}}
+          </picker>
+        </view>
+      </view>
+
     </view>
   </view>
+  <!-- <view class='bottom-tip'>
+      <text>芝麻信用600分以上，安全可信任</text>
+    </view> -->
+  <view class="bottom-fixed">
+    <navigator class="bottom-bnt w40" open-type="navigateBack" delta="1">返回</navigator>
+    <navigator class="bottom-bnt w60" bindtap="post">确认发布</navigator>
+  </view>
+</view>

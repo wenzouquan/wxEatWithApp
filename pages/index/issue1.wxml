@@ -17,14 +17,25 @@
         </navigator>
 
 
-        <view class="li mgt10">
-          <text class="li-input-text">邀请人数</text>
-          <view class="li-input">
-            <picker bindchange="bindPickerChange" value="{{index}}" range="{{numberOfPeople}}">
-              <view class="picker"> 1 人 {{numberOfPeople[index]}}</view>
-            </picker>
-          </view>
+        
+      <view class="li mgt10">
+        <text class="li-input-text">邀请人数</text>
+        <view class="li-input li-input2">
+          <picker bindchange="bindPickerChange" data-type="min" range="{{numbers}}">
+            <!-- <input placeholder="下限" type='number' value="{{minPeople}}"  placeholder-class="textareaClass" maxlength="3"></input> -->
+            <text class="light mg0" wx:if="{{minPeople==''}}">最少人数</text> {{minPeople}}
+          </picker>
         </view>
+        <view class="li-input-tip light">~</view>
+        <view class="li-input li-input2">
+          <picker bindchange="bindPickerChange" data-type="max" range="{{numbers}}">
+            <text class="light mg0" wx:if="{{maxPeople==''}}">最多人数</text> {{maxPeople}}
+            <!-- <input placeholder="上限" type='number' value="{{maxPeople}}"  placeholder-class="textareaClass" maxlength="3"></input> -->
+          </picker>
+        </view>
+        <view class="li-input-tip light">人</view>
+        <view class="clear"></view>
+      </view>
 
         <view class="li">
           <text class="li-input-text">时间</text>
@@ -59,9 +70,9 @@
 
       </view>
     </view>
-    <view class='bottom-tip'>
+    <!-- <view class='bottom-tip'>
       <text>芝麻信用600分以上，安全可信任</text>
-    </view>
+    </view> -->
     <view class="bottom-fixed">
       <navigator  class="bottom-bnt w40" open-type="navigateBack" delta="1">返回</navigator>
       <navigator class="bottom-bnt w60" bindtap="post" >确认发布</navigator>

@@ -72,7 +72,7 @@
 
   <view class="list-bottom {{tabId==1?'':'none'}}">
     <view data-id="2" bindtap="jumpIssue" class="list-bottom-btn pull-right">成为东道主</view>
-    <view class="list-bottom-count pull-right">附近有1020位热情的东道主愿意招待您</view>
+    <view class="list-bottom-count pull-right">附近有1020位东道主愿意接待您</view>
   </view>
 
 </view>

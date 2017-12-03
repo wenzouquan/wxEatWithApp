@@ -8,3 +8,26 @@
 .green{ color:#2abf4c }
 .money-one .moneyico image{ width: 50rpx; height: 50rpx; margin-top:5rpx;}
 .moneytext .title .pull-left{ font-size: 30rpx;}
+
+.userBank,.userMoneyPage,.userWithDraw{ height: 100%; width: 100%;}
+
+.withdrawBox{ margin: 20rpx; }
+.withdrawBox-1{ background-color: #faf9fc}
+.withdrawBox-1-right{ padding-left: 160rpx;}
+.withdrawBox-2{ background-color: #fff;}
+.withdrawBox-2-input .pull-left{ font-size: 40rpx;}
+.withdrawBox-2-input{ border-bottom: 1px solid #eee; }
+.withdrawBox-3{background-color: #fff;}
+.withdrawBox-2-input input{  height:100rpx; font-size: 80rpx; box-sizing: border-box;  display: block; padding-left: 20rpx; padding-bottom: 10rpx;}
+.withdrawBox-3 text{ text-align: center; display: block}
+
+
+.bankitem{ padding: 20rpx; background-color: #fff; position:relative }
+.bankitem.add{ padding-bottom: 40rpx;}
+.bankitem image{ position: absolute; width: 20rpx; height: 20rpx; top: 50rpx; right: 40rpx; }
+.BankBoxItem{ background: #fff; padding: 20rpx;}
+.BankBoxItemOne{ padding: 10rpx;}
+.BankBoxItem .input{ display: block; padding-left: 100rpx;}
+.buttons{ padding: 40rpx;}
+.pdpig{ padding-bottom: 20rpx; padding-top:30rpx;}
+.pdpig .line{ margin-top:30rpx;}

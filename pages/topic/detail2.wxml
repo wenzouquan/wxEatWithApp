@@ -35,7 +35,7 @@
     <text class="light  p pd10">就餐地点</text>
     <view data-latitude="" data-longitude="" bindtap='openLocation'  class="pd10 bgw">
       <view class="pull-left">
-        <image src="/image/04.jpg" class="smallimg"></image>
+        <image src="/image/marker.png" class="smallimg"></image>
         <text >旧时书店（上海长泰广场89号2层）</text>
       </view>
       <view class="pull-right">200m
@@ -47,9 +47,10 @@
       <text class="light  p pd10">拼单优惠</text>
     <view class="pd10 bgw">
       <view class="pull-left">
+       <image src="/image/ico40.png" class="smallimg"></image>
         找朋友一拼单可享受 <text class="blue">8折</text> 优惠
       </view>
-      <view class="pull-right">
+      <view class="pull-right" style='margin-top:3rpx;'>
        <button class="buttonNone sharebutton"  open-type="share">发送给朋友
         <image class="to-right" class="smallimg" src="/image/share@2x.png" alt="" />
        </button>
@@ -60,7 +61,7 @@
 
     <text class="light  p pd10">就餐人数及时间</text>
     <view class=" pd10 bgw">
-      <view class="pull-left"> 最少3人 最多5人 </view>
+      <view class="pull-left">  <image src="/image/ico16.png" class="smallimg"></image> 最少3人 最多5人 </view>
       <view class="pull-right">15：30</view>
       <view class='clear'></view>
     </view>

@@ -5,4 +5,5 @@
  <block wx:if="{{topicType==2}}">  
       <include src="/pages/index/issue2.wxml" />
  </block>   
+ <view style='height:100rpx;'></view>
 </page>

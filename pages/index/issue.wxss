@@ -1,7 +1,7 @@
 /**index.wxss**/
 .li-input-text{ width: 140rpx; color: #888888}
-.li-input input{ padding-top: 5rpx}
-.li-input textarea{ padding-left: 150rpx; box-sizing: border-box; margin-top: 15rpx;}
+.li-input input{ padding-top: 8rpx}
+.li-input textarea{ padding-left: 170rpx; box-sizing: border-box; margin-top: 15rpx;}
 .tip{ padding: 15rpx;}
 .uploadImg{ white-space:nowrap; width: 100%;  height: 160rpx; background: #fff; padding: 20rpx 0rpx;}
 .uploadImg .uploadItem{ display: inline-block; margin-left: 30rpx; width: 160rpx; height: 160rpx; position: relative}
@@ -14,3 +14,6 @@
 .uploadImg .uploadBnt.bgg{ background: #fbf9fe; width: 160rpx; height: 160rpx; top: 0; position: absolute; box-sizing: border-box; padding-top: 25rpx; z-index: 10 }
 .blockImage image{ display: block}
 .uploadImg .delImg{ width: 30rpx; height: 30rpx; position: absolute ; right: 5rpx; top: 0}
+.li-input2 { float: left; width: 160rpx;}
+.li-input-tip{   float: left;width: 20rpx; }
+.list-li .ul .li .mg0{ margin: 0;} 

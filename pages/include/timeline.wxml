@@ -9,13 +9,13 @@
           <view class="media-body lineHContent">
             <view class="media-heading">
               <view class="pull-left">
-               <view class="blue"> {{item.user.nickName}}
-                <text class="f12 muted ">就餐时间:</text> 2017.12.4 9:00
+               <view class=""> {{item.user.nickName}} <text class="f12 muted ">正在邀请</text> 5〜6位饭友 <text class="f12 muted ">去</text> 一味一城 <text class="f12 muted ">吃饭</text>
+                <text class="f12 muted ">，时间:</text> 2017.12.4 9:00
                 </view>
             </view>
-              <view class='ico pull-right'>
+              <!-- <view class='ico pull-right'>
                 <image src="/image/share@2x.png"></image>
-              </view>
+              </view> -->
               <view class='clear'></view>
               
             </view>
