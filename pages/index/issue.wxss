@@ -1,7 +1,7 @@
 /**index.wxss**/
 .li-input-text{ width: 140rpx; color: #888888}
 .li-input input{ padding-top: 8rpx}
-.li-input textarea{ padding-left: 170rpx; box-sizing: border-box; margin-top: 15rpx;}
+.li-input textarea{ padding-left: 170rpx; box-sizing: border-box; margin-top: 15rpx; width: 100%; padding-right: 40rpx;}
 .tip{ padding: 15rpx;}
 .uploadImg{ white-space:nowrap; width: 100%;  height: 160rpx; background: #fff; padding: 20rpx 0rpx;}
 .uploadImg .uploadItem{ display: inline-block; margin-left: 30rpx; width: 160rpx; height: 160rpx; position: relative}
