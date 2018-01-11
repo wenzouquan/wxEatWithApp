@@ -1,0 +1,8 @@
+<!--pages/upload/index.wxml-->
+<text>pages/upload/index.wxml</text>
+<view bindtap='didPressChooseImage'>上传图片</view>
+
+<view class="container">
+    <video src="{{src}}"></video>
+    <button bindtap="bindButtonTap">获取视频</button>
+</view>

@@ -3,9 +3,9 @@
     <view class="list-li">
       <view class="ul">
         <view class="li mgt10">
-          <text class="li-input-text">说明</text>
+         
           <view class="li-input">
-            <textarea placeholder-class="textareaClass"   auto-height placeholder="想和什么样的人，吃一顿怎么样的饭" maxlength="100"></textarea>
+            <textarea class="info" placeholder-class="textareaClass"   auto-height placeholder="想和什么样的人，吃一顿怎么样的饭" maxlength="100"></textarea>
            
           </view>
         </view>

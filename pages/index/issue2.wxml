@@ -19,16 +19,16 @@
       </block>
     </scroll-view>
     <view class="tip light">
-      <view>请上传接待环境，菜品，能突出特色的图片</view>
+      <view >请上传接待环境，菜品，能突出特色的图片</view>
     </view>
   </view>
 
   <view class="list-li">
     <view class="ul">
       <view class="li mgt10">
-        <text class="li-input-text">说明</text>
+      
         <view class="li-input">
-          <textarea placeholder-class="textareaClass" auto-height placeholder="自己介绍，菜品，特色，注意事项等" maxlength="100"></textarea>
+          <textarea class="info" placeholder-class="textareaClass" auto-height placeholder="自己介绍，菜品，特色，注意事项等" maxlength="100"></textarea>
         </view>
       </view>
 

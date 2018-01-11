@@ -12,7 +12,7 @@ Page({
     advanceDateText:'',
     discountText:'',
     imageList:[],
-    topicType:2,
+    topicType:1,
     markers: [
     ],
     expenseArray: ['0〜100元', '100〜200元', '200〜500元','500元以上'],

@@ -1,12 +1,14 @@
-<page class="topicPage">
+<page >
+<view class="topicPage">
   <block wx:if="{{topicType==1}}">
       <include src="/pages/topic/detail1.wxml" />
  </block>   
  <block wx:if="{{topicType==2}}">  
       <include src="/pages/topic/detail2.wxml" />
  </block> 
+ </view>
  <!--弹出层-->
-  <view class="popup {{popup==1?'modal-in':'none'}}">
+  <view class="popup {{popup==1?'modal-in':''}}">
     <form bindsubmit="formSubmit">
       <view class="reply">
         <textarea name="content" fixed="true" value="{{reply.value}}" auto-height placeholder="{{reply.placeholder}}" />
